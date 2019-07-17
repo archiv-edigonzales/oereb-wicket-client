@@ -1,0 +1,83 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'ch.so.agi.oereb'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+    jcenter()
+	mavenCentral()
+}
+
+configurations {
+    jaxb
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+    implementation 'org.springframework:spring-oxm:5.1.6.RELEASE'	
+    
+    compile group: 'javax.xml.bind',name:'jaxb-api', version:'2.3.0'
+    compile group: 'com.sun.xml.bind',name:'jaxb-core', version:'2.3.0'
+    compile group: 'com.sun.xml.bind',name:'jaxb-impl', version:'2.3.0'
+    compile group: 'javax.activation', name: 'activation', version: '1.1.1'
+	
+    jaxb (
+        'com.sun.xml.bind:jaxb-xjc:2.2.7',
+        'com.sun.xml.bind:jaxb-impl:2.2.7'
+    )	
+}
+
+def generatedXjcSources = "$buildDir/xjc/java"
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java',"$generatedXjcSources"]
+        }
+    }
+}
+
+task jaxb {
+    System.setProperty('javax.xml.accessExternalSchema', 'all')
+    inputs.files fileTree(dir: 'src/main/xsd', include: ['*.xsd'])
+    inputs.files fileTree(dir: 'src/main/xjb', include: ['*.xjb'])
+    outputs.dir "$generatedXjcSources"
+    
+    doLast {
+        mkdir "$generatedXjcSources"
+
+        ant.taskdef(
+            name: 'xjc',
+            classname: 'com.sun.tools.xjc.XJCTask',
+            classpath: configurations.jaxb.asPath
+        )
+
+        ant.xjc(
+            destdir: "$generatedXjcSources",
+            language: 'XMLSCHEMA',
+            extension: true
+        ) {
+            schema(dir: "src/main/xsd", includes: "OeREB/**/*.xsd,gml/3.2/gml.xsd")
+            binding(dir: "src/main/xjb", includes: "global.xjb,OeREB.xjb,xmldsig-core-schema.xjb,gml.xjb,iso-19139.xjb,xlink.xjb")
+            //arg(value: '-verbose')
+        }
+    }
+}
+compileJava.dependsOn jaxb
