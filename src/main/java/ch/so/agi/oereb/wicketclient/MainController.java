@@ -4,11 +4,17 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.FileChannel;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -25,6 +31,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 import javax.xml.transform.stream.StreamSource;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +53,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.ehi.oereb.schemas.oereb._1_0.extract.GetExtractByIdResponse;
+import ch.ehi.oereb.schemas.oereb._1_0.extractdata.ThemeType;
 
 
 //import ch.ehi.oereb.schemas.gml._3_2.MultiSurface;
@@ -82,8 +90,10 @@ public class MainController {
     
     protected static final String extractNS = "http://schemas.geo.admin.ch/V_D/OeREB/1.0/Extract";
     
-    Logger logger=org.slf4j.LoggerFactory.getLogger(this.getClass());
+    Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
     
+    private String webServiceUrl = "https://geoview.bl.ch/main/oereb/extract/reduced/xml/geometry/";
+            
     @Autowired
     Jaxb2Marshaller marshaller;
         
@@ -92,29 +102,45 @@ public class MainController {
         return new ResponseEntity<String>("oereb wicket client", HttpStatus.OK);
     }
    
-    @GetMapping("/client")
-    public ResponseEntity<String>  client() throws IOException {
-        String fileContent  = null;
-        InputStream resource = new ClassPathResource("CH567107399166_geometry_images.xml").getInputStream();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource))) {
-            fileContent = reader.lines().collect(Collectors.joining("\n"));
+    /*
+     * https://example.com/oereb/extract/reduced/xml/CH158782774974
+     * http://localhost:8080/extract/reduced/xml/CH158782774974
+     */
+    @GetMapping(value="/extract/reduced/xml/{egrid}", consumes=MediaType.ALL_VALUE)
+    public ResponseEntity<?> getExtractByEgrid(@PathVariable String egrid) throws IOException {
+        logger.info(egrid);
+        
+
+        File xmlFile = Files.createTempFile("data_extract_tmp_", ".xml").toFile();
+//        logger.info("Temp file : " + xmlFile.getAbsolutePath());
+
+        // Use extract from local resources. 
+//        InputStream xmlResource = new ClassPathResource("CH567107399166_geometry_images.xml").getInputStream();        
+//        Files.copy(xmlResource, xmlFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+//        IOUtils.closeQuietly(xmlResource);
+
+        // Download extract from web service.
+        URL url = new URL(webServiceUrl + egrid);
+        ReadableByteChannel readableByteChannel = Channels.newChannel(url.openStream());
+        try (FileOutputStream xmlOutputStream = new FileOutputStream(xmlFile)) {
+            xmlOutputStream.getChannel().transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
         }
+        logger.info("File downloaded: " + xmlFile.getAbsolutePath());
         
-        
-        final Path path = Files.createTempFile("data_extract_tmp_", ".xml");
-        System.out.println("Temp file : " + path);
-
-        //Writing data here
-        byte[] buf = fileContent.getBytes();
-        Files.write(path, buf);
-
-
-        StreamSource xmlSource = new StreamSource(path.toFile());
-        System.out.println(xmlSource);
-
+        // Process data extract.
+        StreamSource xmlSource = new StreamSource(xmlFile);
+        logger.info(xmlSource.toString());
 
         GetExtractByIdResponse obj = (GetExtractByIdResponse) marshaller.unmarshal(xmlSource);
-        System.out.println(obj.getValue().getExtract().getValue().getExtractIdentifier());
+        logger.info(obj.getValue().getExtract().getValue().getExtractIdentifier());
+        logger.info(obj.getValue().getExtract().getValue().getRealEstate().getMunicipality());
+        
+        List<ThemeType> concernedThemes = obj.getValue().getExtract().getValue().getConcernedTheme();
+        for (ThemeType theme : concernedThemes) {
+            logger.info(theme.getCode());
+            logger.info(theme.getText().getText());
+            logger.info("-----");
+        }
         
         return new ResponseEntity<String>("oereb wicket client", HttpStatus.OK);
     }
