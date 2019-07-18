@@ -10,8 +10,6 @@ import org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConvert
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.oxm.xstream.XStreamMarshaller;
 
-import ch.ehi.oereb.schemas.oereb._1_0.versioning.GetVersionsResponse;
-
 @Configuration
 public class WsConfig {
     @Bean
@@ -33,4 +31,5 @@ public class WsConfig {
         marshaller.setLazyInit(true);
         return marshaller;
     }
+    
 }

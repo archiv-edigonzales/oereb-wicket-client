@@ -1,6 +1,14 @@
 package ch.so.agi.oereb.wicketclient;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -8,17 +16,20 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
+import javax.xml.transform.stream.StreamSource;
 
 import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -33,6 +44,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import ch.ehi.oereb.schemas.oereb._1_0.extract.GetExtractByIdResponse;
 
 
 //import ch.ehi.oereb.schemas.gml._3_2.MultiSurface;
@@ -78,6 +91,36 @@ public class MainController {
     public ResponseEntity<String>  ping() {
         return new ResponseEntity<String>("oereb wicket client", HttpStatus.OK);
     }
+   
+    @GetMapping("/client")
+    public ResponseEntity<String>  client() throws IOException {
+        String fileContent  = null;
+        InputStream resource = new ClassPathResource("CH567107399166_geometry_images.xml").getInputStream();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource))) {
+            fileContent = reader.lines().collect(Collectors.joining("\n"));
+        }
+        
+        
+        final Path path = Files.createTempFile("data_extract_tmp_", ".xml");
+        System.out.println("Temp file : " + path);
+
+        //Writing data here
+        byte[] buf = fileContent.getBytes();
+        Files.write(path, buf);
+
+
+        StreamSource xmlSource = new StreamSource(path.toFile());
+        System.out.println(xmlSource);
+
+
+        GetExtractByIdResponse obj = (GetExtractByIdResponse) marshaller.unmarshal(xmlSource);
+        System.out.println(obj.getValue().getExtract().getValue().getExtractIdentifier());
+        
+        return new ResponseEntity<String>("oereb wicket client", HttpStatus.OK);
+    }
+    
+    
+    
     
     /* 
      * https://example.com/oereb/getegrid/xml/?XY=608000,228000
