@@ -110,7 +110,6 @@ public class MainController {
     public ResponseEntity<?> getExtractByEgrid(@PathVariable String egrid) throws IOException {
         logger.info(egrid);
         
-
         File xmlFile = Files.createTempFile("data_extract_tmp_", ".xml").toFile();
 //        logger.info("Temp file : " + xmlFile.getAbsolutePath());
 

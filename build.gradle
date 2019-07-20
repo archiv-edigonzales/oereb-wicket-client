@@ -31,7 +31,8 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
-    implementation 'org.springframework:spring-oxm:5.1.6.RELEASE'	
+    implementation 'org.springframework:spring-oxm:5.1.6.RELEASE'   
+    implementation 'com.giffing.wicket.spring.boot.starter:wicket-spring-boot-starter:2.1.7'   
     
     compile group: 'javax.xml.bind',name:'jaxb-api', version:'2.3.0'
     compile group: 'com.sun.xml.bind',name:'jaxb-core', version:'2.3.0'
