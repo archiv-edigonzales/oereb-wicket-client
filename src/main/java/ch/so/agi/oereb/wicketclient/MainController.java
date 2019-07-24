@@ -54,6 +54,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import ch.ehi.oereb.schemas.oereb._1_0.extract.GetExtractByIdResponse;
 import ch.ehi.oereb.schemas.oereb._1_0.extractdata.ThemeType;
+import ch.so.agi.oereb.wicketclient.services.ExtractService;
 
 
 //import ch.ehi.oereb.schemas.gml._3_2.MultiSurface;
@@ -96,7 +97,10 @@ public class MainController {
             
     @Autowired
     Jaxb2Marshaller marshaller;
-        
+
+    @Autowired
+    ExtractService extractService;
+    
     @GetMapping("/")
     public ResponseEntity<String>  ping() {
         return new ResponseEntity<String>("oereb wicket client", HttpStatus.OK);
@@ -109,6 +113,8 @@ public class MainController {
     @GetMapping(value="/extract/reduced/xml/{egrid}", consumes=MediaType.ALL_VALUE)
     public ResponseEntity<?> getExtractByEgrid(@PathVariable String egrid) throws IOException {
         logger.info(egrid);
+        
+//        extractService.getExtractByEgrid(egrid);
         
         File xmlFile = Files.createTempFile("data_extract_tmp_", ".xml").toFile();
 //        logger.info("Temp file : " + xmlFile.getAbsolutePath());

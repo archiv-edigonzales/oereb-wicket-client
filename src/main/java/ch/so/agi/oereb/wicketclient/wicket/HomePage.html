@@ -1,6 +1,12 @@
-<html xmlns:wicket="http://wicket.apache.org">
+<html wicket:id="html" xmlns:wicket="http://wicket.apache.org">
     <head>
-        <title>Wicket!</title>
+        <meta charset="utf-8">
+        <!-- <script wicket:id="newrelic" id="newrelic-rum" type="text/javascript"></script> -->
+        <title>Apache Wicket &amp; Bootstrap</title>
+        <meta wicket:id="viewport">
+        <meta wicket:id="description">
+        <meta wicket:id="author">
+        <meta wicket:id="ie-edge">
     </head>
     <body>
         <div class="container">
@@ -12,12 +18,27 @@
 			<form wicket:id="form">
                 <label for="egrid">E-GRID: </label> <input type="text" id="egrid" wicket:id="egrid"/>			
 			    <input type="submit" value="submit"/>
+                <div wicket:id="feedback"></div>			    
 			</form>
             
+            <br>
+            
+            <div class="bs-docs-example">
+                <div wicket:id="accordion42"></div>
+            </div>
+            
+            <br>
+
             <span wicket:id="timeStamp">Date goes here</span>
             
             <br>
             
+            <div id="bd" style="display: table;">
+                <div wicket:id="persons" style="display: table-row;">
+                    <div style="display: table-cell;"><b>Full name: </b></div>
+                    <div wicket:id="fullName" style="display: table-cell;"></div>
+                </div>
+            </div>
             
         </div>
     </body>
