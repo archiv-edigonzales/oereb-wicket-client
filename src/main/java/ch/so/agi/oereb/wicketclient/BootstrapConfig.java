@@ -14,9 +14,9 @@ public class BootstrapConfig extends WicketBootStandardWebApplication {
     protected void init() {
         super.init();
         
-        if (getConfigurationType() == RuntimeConfigurationType.DEVELOPMENT) {
-            getDebugSettings().setComponentPathAttributeName("wicketpath");
-        }
+//        if (getConfigurationType() == RuntimeConfigurationType.DEVELOPMENT) {
+//            getDebugSettings().setComponentPathAttributeName("wicketpath");
+//        }
         
         BootstrapSettings settings = new BootstrapSettings();
         Bootstrap.install(this, settings);

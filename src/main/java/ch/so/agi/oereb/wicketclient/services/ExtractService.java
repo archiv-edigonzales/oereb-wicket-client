@@ -32,7 +32,8 @@ public class ExtractService {
 
     public GetExtractByIdResponse getExtractByEgrid(String egrid) throws IOException {
         logger.info(egrid);
-        
+
+        // TODO: handle empty file / no extract returned
         File xmlFile = Files.createTempFile("data_extract_", ".xml").toFile();
 
         URL url = new URL(webServiceUrl + egrid);
