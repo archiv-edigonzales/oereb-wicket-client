@@ -1,7 +1,6 @@
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1" 
-  >
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" version="2.1">
  <globalBindings  generateElementClass="true">
-    
+  <xjc:serializable uid="1"/>
  </globalBindings>
 
 </bindings>

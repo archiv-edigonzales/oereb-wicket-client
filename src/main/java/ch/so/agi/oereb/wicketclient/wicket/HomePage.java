@@ -38,7 +38,7 @@ import de.agilecoders.wicket.core.markup.html.bootstrap.tabs.Collapsible;
 import de.agilecoders.wicket.core.markup.html.bootstrap.tabs.TextContentTab;
 
 
-@WicketHomePage
+//@WicketHomePage
 //@MountPath(value = "/javascript", alt = "/js")
 public class HomePage extends WebPage {
     @SpringBean
@@ -50,6 +50,8 @@ public class HomePage extends WebPage {
     Collapsible Collapsible;
     
     public HomePage() {
+        
+        IModel<String> name = new Model<String>("John");
         
         add(new HtmlTag("html"));
         MobileViewportMetaTag mvt = new MobileViewportMetaTag("viewport");
@@ -68,20 +70,12 @@ public class HomePage extends WebPage {
                 System.out.println(egrid);
                 
                 try {
-//                    extractService = new ExtractService();
                     extractService.getExtractByEgrid(egrid);
                     
                     tabs.add(new TextContentTab(Model.of("Title 3"), Model.of("Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.")));
 
-//                    collapsible.clearOriginalDestination();
-//                    collapsible.remove();
                     Collapsible collapsible = new Collapsible("accordion42", tabs, Model.of(-1));
                     this.getParent().replace(collapsible);
-//                    collapsible.modelChanged();
-//                    collapsible.render();
-
-
-//                    add(collapsible);
 
                 } catch (IOException e) {                    
                     error(e.getMessage());

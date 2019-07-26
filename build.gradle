@@ -81,7 +81,7 @@ task jaxb {
         ) {
             schema(dir: "src/main/xsd", includes: "OeREB/**/*.xsd,gml/3.2/gml.xsd")
             binding(dir: "src/main/xjb", includes: "global.xjb,OeREB.xjb,xmldsig-core-schema.xjb,gml.xjb,iso-19139.xjb,xlink.xjb")
-            //arg(value: '-verbose')
+            arg(value: '-verbose')
         }
     }
 }

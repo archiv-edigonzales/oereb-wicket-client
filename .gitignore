@@ -1,3 +1,5 @@
+.sts4-cache/
+
 src/main/resources/templates/version.txt
 
 target/

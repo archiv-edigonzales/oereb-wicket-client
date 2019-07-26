@@ -1,0 +1,33 @@
+<html wicket:id="html" xmlns:wicket="http://wicket.apache.org">
+    <head>
+        <meta charset="utf-8">
+        <title>ÖREB Web Client</title>
+        <meta wicket:id="viewport">
+        <meta wicket:id="description">
+        <meta wicket:id="author">
+        <meta wicket:id="ie-edge">
+    </head>
+    <body>
+        <div class="container">
+            <form wicket:id="form">
+                <label for="egrid">E-GRID: </label> <input type="text" id="egrid" wicket:id="egrid"/>           
+                <input type="submit" value="submit"/>
+                <div wicket:id="feedback"></div>                
+            </form>
+            
+            <br>
+            
+            <div wicket:id="concernedThemes">
+                <h4 wicket:id="themeText"></h4>
+                <p wicket:id="themeCode"></p>
+            </div>
+            
+            <br>
+
+            <span wicket:id="timeStamp">Date goes here</span>
+            
+            <br>
+            
+        </div>
+    </body>
+</html>
