@@ -14,20 +14,30 @@
                 <input type="submit" value="submit"/>
                 <div wicket:id="feedback"></div>                
             </form>
-            
-            <br>
-            
-            <div wicket:id="concernedThemes">
-                <h4 wicket:id="themeText"></h4>
-                <p wicket:id="themeCode"></p>
-            </div>
-            
-            <br>
-
+            <br>            
             <span wicket:id="timeStamp">Date goes here</span>
-            
             <br>
-            
+            <br>
+            <br>
+            <ul>
+                <li>Eigentumsbeschränkungen werden nicht gruppiert (siehe E-EGRID: CH938278494529)</li>
+                <li>Nur BL wird angezapft.</li>
+                <li>Nur Ref-Bilder und WMS</li>
+                <li>Openlayers: Einiges würde gehen, einiges nicht und:
+                    <ul>
+                        <li>EPSG:3857, weil LV95 nicht funktionierte.</li>
+                        <li>Es gibt nur eine TiledWMS-Klasse.</li>
+                        <li>Nur Plan für das Grundbuch hinzugefügt (hardcodiert, testeshalber)</li>
+                    </ul>
+                </li>
+                <li>E-GRID:
+                    <ul>
+                        <li>CH158782774974</li>
+                        <li>CH944982786913</li>
+                        <li>CH938278494529</li>
+                    </ul>
+                </li>
+            </ul>            
         </div>
     </body>
 </html>

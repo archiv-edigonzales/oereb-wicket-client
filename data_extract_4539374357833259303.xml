@@ -1,0 +1,3221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GetExtractByIdResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns="http://schemas.geo.admin.ch/V_D/OeREB/1.0/Extract"
+                        xmlns:data="http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData"
+                        xmlns:gml="http://www.opengis.net/gml/3.2"
+                        xsi:schemaLocation="http://schemas.geo.admin.ch/V_D/OeREB/1.0/Extract http://schemas.geo.admin.ch/V_D/OeREB/1.0/Extract.xsd http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData.xsd">
+
+
+
+    <data:Extract>
+        <data:CreationDate>2019-07-27T17:21:08</data:CreationDate>
+        <data:ConcernedTheme>
+            
+<data:Code>LandUsePlans</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Nutzungsplanung (kantonal / kommunal)</data:Text>
+
+</data:Text>
+        </data:ConcernedTheme>
+        <data:ConcernedTheme>
+            
+<data:Code>ch.BL.CantonalBuildingLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kantonale Baulinien</data:Text>
+
+</data:Text>
+        </data:ConcernedTheme>
+        <data:ConcernedTheme>
+            
+<data:Code>NoiseSensitivityLevels</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Lärmempfindlichkeitsstufen (in Nutzungszonen)</data:Text>
+
+</data:Text>
+        </data:ConcernedTheme>
+        <data:ConcernedTheme>
+            
+<data:Code>ForestPerimeters</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Statische Waldgrenzen</data:Text>
+
+</data:Text>
+        </data:ConcernedTheme>
+        <data:ConcernedTheme>
+            
+<data:Code>ForestDistanceLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Waldabstandslinien</data:Text>
+
+</data:Text>
+        </data:ConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>ch.BL.MunicipalBuildingLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kommunale Baulinien</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>MotorwaysProjectPlaningZones</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Projektierungszonen Nationalstrassen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>MotorwaysBuildingLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Baulinien Nationalstrassen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>RailwaysProjectPlanningZones</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Projektierungszonen Eisenbahnanlagen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>RailwaysBuildingLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Baulinien Eisenbahnanlagen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>AirportsProjectPlanningZones</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Projektierungszonen Flughafenanlagen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>AirportsBuildingLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Baulinien Flughafenanlagen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>AirportsSecurityZonePlans</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Sicherheitszonenplan</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>ContaminatedSites</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kataster der belasteten Standorte</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>ContaminatedCivilAviationSites</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kataster der belasteten Standorte im Bereich der zivilen Flugplätze</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>ContaminatedPublicTransportSites</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kataster der belasteten Standorte im Bereich des öffentlichen Verkehrs</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>GroundwaterProtectionZones</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Grundwasserschutzzonen</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:NotConcernedTheme>
+            
+<data:Code>GroundwaterProtectionSites</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Grundwasserschutzareale</data:Text>
+
+</data:Text>
+        </data:NotConcernedTheme>
+        <data:ThemeWithoutData>
+            
+<data:Code>ContaminatedMilitarySites</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kataster der belasteten Standorte im Bereich des Militärs</data:Text>
+
+</data:Text>
+        </data:ThemeWithoutData>
+        <data:isReduced>true</data:isReduced>
+        <data:LogoPLRCadastreRef>https://geoview.bl.ch/main/oereb/image/logo/oereb</data:LogoPLRCadastreRef>
+        <data:FederalLogoRef>https://geoview.bl.ch/main/oereb/image/logo/confederation</data:FederalLogoRef>
+        <data:CantonalLogoRef>https://geoview.bl.ch/main/oereb/image/logo/canton</data:CantonalLogoRef>
+        <data:MunicipalityLogoRef>https://geoview.bl.ch/main/oereb/image/municipality/2763</data:MunicipalityLogoRef>
+        <data:ExtractIdentifier>bdc9f555-bc5e-4428-82d2-4e6631c54a71</data:ExtractIdentifier>
+        <data:GeneralInformation>
+            
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Der Inhalt des ÖREB-Katasters wird als bekannt vorausgesetzt. Der Kanton Basel-Landschaft ist für die Genauigkeit und Verlässlichkeit der gesetzgebenden Dokumente in elektronischer Form nicht haftbar. Der Auszug hat rein informativen Charakter und begründet insbesondere keine Rechte und Pflichten. Rechtsverbindlich sind diejenigen Dokumente, welche rechtskräftig verabschiedet oder veröffentlicht worden sind. Mit der Beglaubigung des Auszugs wird die Übereinstimmung des Auszugs mit dem ÖREB-Kataster zum Zeitpunkt der Auszugserstellung bestätigt. Weitere Informationen zum ÖREB-Kataster finden Sie auf unserer Webseite (www.agi.bl.ch).</data:Text>
+</data:LocalisedText>
+
+        </data:GeneralInformation>
+        <data:BaseData>
+            
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Daten der amtlichen Vermessung. Stand der amtlichen Vermessung: 26.06.2019.</data:Text>
+</data:LocalisedText>
+
+        </data:BaseData>
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>AltlV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung vom 26. August 1998 über die Sanierung von belasteten Standorten (Altlasten-Verordnung) (SR 814.680)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>BFS-Nr.</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeindenummer aus amtlichem Gemeindeverzeichnis</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>E-GRID</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Eidgenössischer Grundstücksidentifikator</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>EBG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Eisenbahngesetz vom 20. Dezember 1957 (SR 742.101)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>GSchG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz vom 24. Januar 1991 über den Schutz der Gewässer (Gewässerschutzgesetz) (SR 814.20)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>GSchV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gewässerschutzverordnung vom 28. Oktober 1998 (SR 814.201)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>KÖREBKV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Kantonale Verordnung über den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen (SGS 211.59)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>LFG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz vom 21. Dezember 1948 über die Luftfahrt (Luftfahrtgesetz) (SR 748.0)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>LSV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Lärmschutz-Verordnung vom 15. Dezember 1986 (SR 814.41)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>NSG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz vom 8. März 1960 über die Nationalstrassen (SR 725.11)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>NSV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Nationalstrassenverordnung vom 7. November 2007 (SR 725.111)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>ÖREB</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Öffentlich-rechtliche Beschränkung des Grundeigentums</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>ÖREB-Kataster</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>ÖREBKV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung vom 2. September 2009 über den Kataster der öffentlich-rechtlichen Eigentumsbeschränkungen (SR 510.622.4)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RPG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz vom 22. Juni 1979 über die Raumplanung (Raumplanungsgesetz) (SR 700)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RRB</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Regierungsratsbeschluss</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>USG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz vom 7. Oktober 1983 über den Umweltschutz (Umweltschutzgesetz) (SR 814.01)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>VIL</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung vom 23. November 1994 über die Infrastruktur der Luftfahrt (RS 748.131.1)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>WaG</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz vom 4. Oktober 1991 über den Wald (Waldgesetz) (SR 921.0)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+<data:Glossary xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>WaV</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung vom 30. November 1992 über den Wald (Waldverordnung) (SR 921.01)</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:Glossary>
+
+        
+
+<data:RealEstate>
+    <data:Number>1434</data:Number>
+    <data:IdentDN>BL0200002763</data:IdentDN>
+    <data:EGRID>CH158782774974</data:EGRID>
+    <data:Type>RealEstate</data:Type>
+    <data:Canton>BL</data:Canton>
+    <data:Municipality>Arlesheim</data:Municipality>
+    <data:FosNr>2763</data:FosNr>
+    <data:LandRegistryArea>572</data:LandRegistryArea>
+    <data:Limit>
+        <gml:MultiSurface gml:id="gml1">
+            <gml:surfaceMember>
+                
+<gml:Polygon gml:id="gml2">
+    <gml:exterior>
+        <gml:LinearRing>
+            <gml:pos>2613009.085 1260364.369</gml:pos>
+            <gml:pos>2613009.289 1260365.438</gml:pos>
+            <gml:pos>2613015.84 1260385.419</gml:pos>
+            <gml:pos>2613018.788 1260384.358</gml:pos>
+            <gml:pos>2613033.569 1260379.04</gml:pos>
+            <gml:pos>2613056.176 1260370.864</gml:pos>
+            <gml:pos>2613056.746 1260370.577</gml:pos>
+            <gml:pos>2613054.615 1260366.014</gml:pos>
+            <gml:pos>2613054.294 1260366.777</gml:pos>
+            <gml:pos>2613053.093 1260368.733</gml:pos>
+            <gml:pos>2613036.672 1260374.726</gml:pos>
+            <gml:pos>2613028.733 1260357.5</gml:pos>
+            <gml:pos>2613027.909 1260355.686</gml:pos>
+            <gml:pos>2613009.085 1260364.369</gml:pos>
+        </gml:LinearRing>
+    </gml:exterior>
+    <gml:interior>
+        <gml:LinearRing>
+            <gml:pos>2613009.085 1260364.369</gml:pos>
+            <gml:pos>2613009.289 1260365.438</gml:pos>
+            <gml:pos>2613015.84 1260385.419</gml:pos>
+            <gml:pos>2613018.788 1260384.358</gml:pos>
+            <gml:pos>2613033.569 1260379.04</gml:pos>
+            <gml:pos>2613056.176 1260370.864</gml:pos>
+            <gml:pos>2613056.746 1260370.577</gml:pos>
+            <gml:pos>2613054.615 1260366.014</gml:pos>
+            <gml:pos>2613054.294 1260366.777</gml:pos>
+            <gml:pos>2613053.093 1260368.733</gml:pos>
+            <gml:pos>2613036.672 1260374.726</gml:pos>
+            <gml:pos>2613028.733 1260357.5</gml:pos>
+            <gml:pos>2613027.909 1260355.686</gml:pos>
+            <gml:pos>2613009.085 1260364.369</gml:pos>
+        </gml:LinearRing>
+    </gml:interior>
+</gml:Polygon>
+            </gml:surfaceMember>
+        </gml:MultiSurface>
+    </data:Limit>
+    
+
+<data:RestrictionOnLandownership>
+    <data:Information>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Wohn- und Geschäftszone WG3</data:Text>
+</data:LocalisedText>
+
+    </data:Information>
+    <data:Theme>
+        
+<data:Code>LandUsePlans</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Nutzungsplanung (kantonal / kommunal)</data:Text>
+
+</data:Text>
+    </data:Theme>
+    
+    <data:SubTheme>07.73B.Grundnutzung</data:SubTheme>
+    <data:TypeCode>102315</data:TypeCode>
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:AreaShare>572</data:AreaShare>
+    <data:PartInPercent>100.0</data:PartInPercent>
+    <data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FLandUsePlans%2F1%2F102315</data:SymbolRef>
+    
+<data:Geometry>
+        
+<data:Surface>
+    
+<gml:Polygon gml:id="gml3">
+    <gml:exterior>
+        <gml:LinearRing>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+            <gml:pos>2613090.617 1260507.554</gml:pos>
+            <gml:pos>2613122.953 1260507.946</gml:pos>
+            <gml:pos>2613125.062 1260504.535</gml:pos>
+            <gml:pos>2613109.594 1260481.211</gml:pos>
+            <gml:pos>2613104.44 1260472.676</gml:pos>
+            <gml:pos>2613099.702 1260463.821</gml:pos>
+            <gml:pos>2613095.343 1260454.784</gml:pos>
+            <gml:pos>2613086.786 1260436.139</gml:pos>
+            <gml:pos>2613071.73 1260403.314</gml:pos>
+            <gml:pos>2613056.746 1260370.577</gml:pos>
+            <gml:pos>2613054.615 1260366.014</gml:pos>
+            <gml:pos>2613046.127 1260347.315</gml:pos>
+            <gml:pos>2613037.218 1260328.141</gml:pos>
+            <gml:pos>2613036.706 1260328.397</gml:pos>
+            <gml:pos>2613032.039 1260318.429</gml:pos>
+            <gml:pos>2613027.215 1260308.52</gml:pos>
+            <gml:pos>2613022.393 1260299.375</gml:pos>
+            <gml:pos>2613017.146 1260290.438</gml:pos>
+            <gml:pos>2613011.307 1260281.762</gml:pos>
+            <gml:pos>2613004.953 1260273.708</gml:pos>
+            <gml:pos>2612998.075 1260265.891</gml:pos>
+            <gml:pos>2612993.243 1260261.119</gml:pos>
+            <gml:pos>2612993.762 1260265.706</gml:pos>
+            <gml:pos>2612998.025 1260295.004</gml:pos>
+            <gml:pos>2613004.615 1260340.865</gml:pos>
+            <gml:pos>2613009.289 1260365.438</gml:pos>
+            <gml:pos>2613015.84 1260385.419</gml:pos>
+            <gml:pos>2613026.854 1260381.456</gml:pos>
+            <gml:pos>2613033.569 1260379.04</gml:pos>
+            <gml:pos>2613047.279 1260414.424</gml:pos>
+            <gml:pos>2613058.126 1260442.325</gml:pos>
+            <gml:pos>2613059.029 1260444.653</gml:pos>
+            <gml:pos>2613052.112 1260446.775</gml:pos>
+            <gml:pos>2613049.911 1260447.466</gml:pos>
+            <gml:pos>2613068.532 1260532.094</gml:pos>
+            <gml:pos>2613075.374 1260531.796</gml:pos>
+            <gml:pos>2613075.375 1260531.455</gml:pos>
+            <gml:pos>2613075.38 1260531.114</gml:pos>
+            <gml:pos>2613075.391 1260530.773</gml:pos>
+            <gml:pos>2613075.449 1260529.582</gml:pos>
+            <gml:pos>2613075.567 1260528.396</gml:pos>
+            <gml:pos>2613075.743 1260527.216</gml:pos>
+            <gml:pos>2613075.978 1260526.047</gml:pos>
+            <gml:pos>2613076.271 1260524.892</gml:pos>
+            <gml:pos>2613076.621 1260523.752</gml:pos>
+            <gml:pos>2613077.052 1260522.659</gml:pos>
+            <gml:pos>2613077.537 1260521.589</gml:pos>
+            <gml:pos>2613078.073 1260520.544</gml:pos>
+            <gml:pos>2613078.659 1260519.526</gml:pos>
+            <gml:pos>2613079.295 1260518.539</gml:pos>
+            <gml:pos>2613079.978 1260517.583</gml:pos>
+            <gml:pos>2613080.694 1260516.649</gml:pos>
+            <gml:pos>2613081.455 1260515.752</gml:pos>
+            <gml:pos>2613082.26 1260514.893</gml:pos>
+            <gml:pos>2613083.105 1260514.075</gml:pos>
+            <gml:pos>2613083.99 1260513.299</gml:pos>
+            <gml:pos>2613084.911 1260512.567</gml:pos>
+            <gml:pos>2613085.737 1260511.976</gml:pos>
+            <gml:pos>2613086.588 1260511.42</gml:pos>
+            <gml:pos>2613087.462 1260510.901</gml:pos>
+            <gml:pos>2613088.357 1260510.419</gml:pos>
+            <gml:pos>2613089.271 1260509.976</gml:pos>
+            <gml:pos>2613089.735 1260509.764</gml:pos>
+            <gml:pos>2613090.203 1260509.561</gml:pos>
+            <gml:pos>2613090.675 1260509.369</gml:pos>
+            <gml:pos>2613091.151 1260509.186</gml:pos>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+        </gml:LinearRing>
+    </gml:exterior>
+    <gml:interior>
+        <gml:LinearRing>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+            <gml:pos>2613090.617 1260507.554</gml:pos>
+            <gml:pos>2613122.953 1260507.946</gml:pos>
+            <gml:pos>2613125.062 1260504.535</gml:pos>
+            <gml:pos>2613109.594 1260481.211</gml:pos>
+            <gml:pos>2613104.44 1260472.676</gml:pos>
+            <gml:pos>2613099.702 1260463.821</gml:pos>
+            <gml:pos>2613095.343 1260454.784</gml:pos>
+            <gml:pos>2613086.786 1260436.139</gml:pos>
+            <gml:pos>2613071.73 1260403.314</gml:pos>
+            <gml:pos>2613056.746 1260370.577</gml:pos>
+            <gml:pos>2613054.615 1260366.014</gml:pos>
+            <gml:pos>2613046.127 1260347.315</gml:pos>
+            <gml:pos>2613037.218 1260328.141</gml:pos>
+            <gml:pos>2613036.706 1260328.397</gml:pos>
+            <gml:pos>2613032.039 1260318.429</gml:pos>
+            <gml:pos>2613027.215 1260308.52</gml:pos>
+            <gml:pos>2613022.393 1260299.375</gml:pos>
+            <gml:pos>2613017.146 1260290.438</gml:pos>
+            <gml:pos>2613011.307 1260281.762</gml:pos>
+            <gml:pos>2613004.953 1260273.708</gml:pos>
+            <gml:pos>2612998.075 1260265.891</gml:pos>
+            <gml:pos>2612993.243 1260261.119</gml:pos>
+            <gml:pos>2612993.762 1260265.706</gml:pos>
+            <gml:pos>2612998.025 1260295.004</gml:pos>
+            <gml:pos>2613004.615 1260340.865</gml:pos>
+            <gml:pos>2613009.289 1260365.438</gml:pos>
+            <gml:pos>2613015.84 1260385.419</gml:pos>
+            <gml:pos>2613026.854 1260381.456</gml:pos>
+            <gml:pos>2613033.569 1260379.04</gml:pos>
+            <gml:pos>2613047.279 1260414.424</gml:pos>
+            <gml:pos>2613058.126 1260442.325</gml:pos>
+            <gml:pos>2613059.029 1260444.653</gml:pos>
+            <gml:pos>2613052.112 1260446.775</gml:pos>
+            <gml:pos>2613049.911 1260447.466</gml:pos>
+            <gml:pos>2613068.532 1260532.094</gml:pos>
+            <gml:pos>2613075.374 1260531.796</gml:pos>
+            <gml:pos>2613075.375 1260531.455</gml:pos>
+            <gml:pos>2613075.38 1260531.114</gml:pos>
+            <gml:pos>2613075.391 1260530.773</gml:pos>
+            <gml:pos>2613075.449 1260529.582</gml:pos>
+            <gml:pos>2613075.567 1260528.396</gml:pos>
+            <gml:pos>2613075.743 1260527.216</gml:pos>
+            <gml:pos>2613075.978 1260526.047</gml:pos>
+            <gml:pos>2613076.271 1260524.892</gml:pos>
+            <gml:pos>2613076.621 1260523.752</gml:pos>
+            <gml:pos>2613077.052 1260522.659</gml:pos>
+            <gml:pos>2613077.537 1260521.589</gml:pos>
+            <gml:pos>2613078.073 1260520.544</gml:pos>
+            <gml:pos>2613078.659 1260519.526</gml:pos>
+            <gml:pos>2613079.295 1260518.539</gml:pos>
+            <gml:pos>2613079.978 1260517.583</gml:pos>
+            <gml:pos>2613080.694 1260516.649</gml:pos>
+            <gml:pos>2613081.455 1260515.752</gml:pos>
+            <gml:pos>2613082.26 1260514.893</gml:pos>
+            <gml:pos>2613083.105 1260514.075</gml:pos>
+            <gml:pos>2613083.99 1260513.299</gml:pos>
+            <gml:pos>2613084.911 1260512.567</gml:pos>
+            <gml:pos>2613085.737 1260511.976</gml:pos>
+            <gml:pos>2613086.588 1260511.42</gml:pos>
+            <gml:pos>2613087.462 1260510.901</gml:pos>
+            <gml:pos>2613088.357 1260510.419</gml:pos>
+            <gml:pos>2613089.271 1260509.976</gml:pos>
+            <gml:pos>2613089.735 1260509.764</gml:pos>
+            <gml:pos>2613090.203 1260509.561</gml:pos>
+            <gml:pos>2613090.675 1260509.369</gml:pos>
+            <gml:pos>2613091.151 1260509.186</gml:pos>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+        </gml:LinearRing>
+    </gml:interior>
+</gml:Polygon>
+</data:Surface>
+
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:MetadataOfGeographicalBaseData>
+        None
+    </data:MetadataOfGeographicalBaseData>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeinde Arlesheim</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.arlesheim.ch</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+</data:Geometry>
+    <data:Map>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FLAYERS%3DLandUsePlans%26STYLES%3Ddefault%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+
+<data:LegendAtWeb>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fcustom_legend_at_web%2FLandUsePlans.png</data:LegendAtWeb>
+
+<data:OtherLegend>
+    
+
+<data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FLandUsePlans%2F1%2F131003</data:SymbolRef>
+<data:LegendText>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Grünzone</data:Text>
+</data:LocalisedText>
+
+</data:LegendText>
+<data:TypeCode>131003</data:TypeCode>
+<data:TypeCodelist>101000101002101003101004101005101006101007101008101009101012101100101101101102101103101104101105101106101107101108101109101110101111101112101113101116101117101118101120101123101124101125101200101201101204101205101206101207101209101210101211101212101213101214101215101216101217101218101219101220101221101222101223101224101225101226101227101228101229101230101231101233101236101237101238101239101240101241101242101300101301101302101303101304101305101306101307101309101310101311101312101313101400101401101402101403102000102001102003102004102005102006102007102008102009102010102011102012102013102014102016102017102018102100102101102200102201102203102204102205102206102207102208102211102212102213102214102215102218102219102220102221102222102223102227102229102236102239102240102241102242102243102244102245102246102247102248102300102301102302102303102305102306102308102309102310102311102312102313102314102315102316102317102318102321102322102323102324102400102401102402102403102404102405102406102407102408102409102411102412102500102501103000103200103201103202103205103206103207103209103300103301103303103304103305103308103309103310103400103401104000104002104003104004104006104007104009104100104101104102104103104105104106104108104200104202104203104204104205104207104209104210104211104212104214104215104217104218104220104223104224104300104301104303104304104305104306104307104900104903104906105001105100105101105200105201105203105300105301105303105304105306105400105402105403105404105405106102106201106202106203106204106206106207106208106209106210106211106212106215106300106301106302106303106304106306106307106309106310106311106313106314106315106316106318106319106322106323106324106325106326106327106329106400106401106402106405106406106408106409106410106411106412106414106415106416106418106501106502106503106504106505106600106601106602106603106901106902107201107202107204108000108001108100108200108202108203108300108303108304108305108400108401108402108500108501108502108503108700108701109000109100110000110001110002111001111004111006111007111009111010111014111015112002112005112006112007112008112009112011112013112014112017112018112021112022112023112026112028112029112031112032112033112034112037112038112041112045112052112054112056112057112058113000113002113003113005113006113007113008113009113010113011113013113014113015120000120002120003120005121102121105121106121107121108121109121110121111121112121113121200121201121202121203121204121300121301130000130002130004130005131000131001131002131003131005131006131008131009131010131011131013131014131015131016132000132001132002132004132006132007132008132010132011132012133000133001133002133005133006133007133008133009133011133012133013133015140400140401140500140501140502140503140504140505140605140701141000141002141005141006141007141008141010141011141012141100141200141400142000142101142102143001143002143007143008143009143010143011143012143014143015143016143101143102143103143104143105143200143300143302143401143402143403143405143406143407143409143411143413143500143501143502143503143504143507143508143509143600143602144001144002144003145000145001145005146000146003146005146008146010146011146012146017146019146022146023147000147001147002147003147004147006147100147200147202147203147204148000148001149000149002149004149100149101149102149103149104149105149106149200149201149203149204149300149301149400149401149402149404149405149502149503149504149506150000150001150002150003150004150006150007151001151005151008151011151014151017151018151100151101151102151103151105151200152000152101152109152110152111152113152114152116152119152120152121152122152123210004211001211002211004211005211006211008211100211101211102211103211104211105211106211107211110211111211112211113211114211115211121211122211123211124211125211126211127211128211129211130211131211132211133211201211203211205211206211207211208212002212004212005212007212009212010212011212012212018212019212020212021212022212023212026212028212030212031212032212102212104212106212108212109212110212111212113212114212116212118212119212120212121212124212125212126212127212129212130212132212135212137212138212139212141212147212149212150212151212152212155212156212157212158212160212162212164212166212167212168212171212173212174212175212176212177212178212180212200212201212202212207212208212209212211212212212213212215212216212217212218212219212300212301212304212305212308212309212400212403212407212409212410212414212415212500212501212700213000213001213002213003214000214001214003214004214005214008214011214014214015215000215001215002215003215006215008215009215010215012215013215014215015215016215019215020215022215023215024215025215026215027215028215029215100215101215102215103215104215201215202215203215207215208215209215210215211215212215213215214215215215216215217215218215220215222215223215224215300215301215302215305215306215307215310215400215401215402216000216001216002216004216005216007216008216009216011216012216100216101216103216104216105216106216109216110216112216113216114216115216200216203216204216205216206216207216210216211216212217000217001217002217006217007217008217009217012217013217014217015217016217017217018217019217020218000218001218002218003218004218005218006218007218012218013218015218016218018218019219000219001219100219101219105219106219108219112219113219116219117219119219120219123219124219125219129219132219200219201219203219204219205219500219501219502220002220003220004220005220006220100220101220102220103220104220105220107220109220116220117220118220120220121220122220123220125220126220127220128220130220131220132220141220142220144220145220146220147220148220149220204230000230001230004230005230006230008231000231001231002231003231100231103240000240002240003240004240005240006240008240009240011240012240013240015240016240017240018240019240101240102240105240301241001241002241003241004241005241201242000242001251200251201251300256000256005256006256007256008256100256101256102256103256104256105256106256108256109256111256114256115256117256118256119256120256121256123257000257001257002257003257004257005257008257009257010257011257013257014257016257017257019257021257023257024257025257027257028257029257031257033257036257037257038257039257041257042257043257045257046257047257048257050257051257052257054258000258001258003258004258005258009258010258011258012258013258014258015258019258020258022258023258025258026258027258028258030258031258032258034258036315101315103315104315105315106315107315108315109315110315111315112315202315204315205315207317201350002350003350005350006351000351001351100351101351102351103351105351106351107352000352001352002352003352004352006352007352008352009352010352011352012352013352014352015352016352017352300352301352500352501352502352503353102353103353104354000354001354003354006354008354012355001355002355003355004355005355007355009355010356001356003357002357003357004357006357007357008358000358004358005358007358008358009358010358013358014358015358016358017358019358021358023358024358025358026358027358030358031358033358036358039358040358043358044358046358050358051358052359001359003359007359008359011359100359102359103359108359110359112359113359114359115359116359118359200359202361002361003361006361007361009361010361011361013361300362000362002362003362004362005362006365100365102365103366000366001366200366201366202366401366403366404366406367001367400367401367402367403367404367500367501450000450003450004450005450006451000451002451200452000452001452002452100452101452200452300452301452500452501452503453002453003453100453101453102453103453104453105453107454000454001454004455001455003455004455007455008455013455016455017455018455020455025456000457002457003457004457005457008457009457011458002458005458008458009458010458011458012458013458015458017458018458019459000459002459004459005459006459009459101459102459104459105459106459108459109459110459112459115459116459117459122459123459124459125459127459128459129459131459132459136459137459138459139459141459143459146459148459149459150459151459152459153459154459155459158459159459160459161459162459164459165459166459201459202459205459206459208460000460001460002460003461000461001461004461005462000465101465102465104465105465106465107465108465109466000466001466002466003466005466006466008466010466012466013466100466101466102466103467000467001467002467003467005467008467009469000469002469006469008469010469011469100469102469103469104469105469106469108469109469200469201469202469300469301469302469303469306469307469308469309469310469312469313469315469316469317469318469320469321469322469323469324469400469401469402469403469404469405469500500100500200</data:TypeCodelist>
+<data:Theme>
+    
+<data:Code>LandUsePlans</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Nutzungsplanung (kantonal / kommunal)</data:Text>
+
+</data:Text>
+</data:Theme>
+
+</data:OtherLegend>
+<data:OtherLegend>
+    
+
+<data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FLandUsePlans%2F1%2F211004</data:SymbolRef>
+<data:LegendText>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landschaftsschonzone</data:Text>
+</data:LocalisedText>
+
+</data:LegendText>
+<data:TypeCode>211004</data:TypeCode>
+<data:TypeCodelist>101000101002101003101004101005101006101007101008101009101012101100101101101102101103101104101105101106101107101108101109101110101111101112101113101116101117101118101120101123101124101125101200101201101204101205101206101207101209101210101211101212101213101214101215101216101217101218101219101220101221101222101223101224101225101226101227101228101229101230101231101233101236101237101238101239101240101241101242101300101301101302101303101304101305101306101307101309101310101311101312101313101400101401101402101403102000102001102003102004102005102006102007102008102009102010102011102012102013102014102016102017102018102100102101102200102201102203102204102205102206102207102208102211102212102213102214102215102218102219102220102221102222102223102227102229102236102239102240102241102242102243102244102245102246102247102248102300102301102302102303102305102306102308102309102310102311102312102313102314102315102316102317102318102321102322102323102324102400102401102402102403102404102405102406102407102408102409102411102412102500102501103000103200103201103202103205103206103207103209103300103301103303103304103305103308103309103310103400103401104000104002104003104004104006104007104009104100104101104102104103104105104106104108104200104202104203104204104205104207104209104210104211104212104214104215104217104218104220104223104224104300104301104303104304104305104306104307104900104903104906105001105100105101105200105201105203105300105301105303105304105306105400105402105403105404105405106102106201106202106203106204106206106207106208106209106210106211106212106215106300106301106302106303106304106306106307106309106310106311106313106314106315106316106318106319106322106323106324106325106326106327106329106400106401106402106405106406106408106409106410106411106412106414106415106416106418106501106502106503106504106505106600106601106602106603106901106902107201107202107204108000108001108100108200108202108203108300108303108304108305108400108401108402108500108501108502108503108700108701109000109100110000110001110002111001111004111006111007111009111010111014111015112002112005112006112007112008112009112011112013112014112017112018112021112022112023112026112028112029112031112032112033112034112037112038112041112045112052112054112056112057112058113000113002113003113005113006113007113008113009113010113011113013113014113015120000120002120003120005121102121105121106121107121108121109121110121111121112121113121200121201121202121203121204121300121301130000130002130004130005131000131001131002131003131005131006131008131009131010131011131013131014131015131016132000132001132002132004132006132007132008132010132011132012133000133001133002133005133006133007133008133009133011133012133013133015140400140401140500140501140502140503140504140505140605140701141000141002141005141006141007141008141010141011141012141100141200141400142000142101142102143001143002143007143008143009143010143011143012143014143015143016143101143102143103143104143105143200143300143302143401143402143403143405143406143407143409143411143413143500143501143502143503143504143507143508143509143600143602144001144002144003145000145001145005146000146003146005146008146010146011146012146017146019146022146023147000147001147002147003147004147006147100147200147202147203147204148000148001149000149002149004149100149101149102149103149104149105149106149200149201149203149204149300149301149400149401149402149404149405149502149503149504149506150000150001150002150003150004150006150007151001151005151008151011151014151017151018151100151101151102151103151105151200152000152101152109152110152111152113152114152116152119152120152121152122152123210004211001211002211004211005211006211008211100211101211102211103211104211105211106211107211110211111211112211113211114211115211121211122211123211124211125211126211127211128211129211130211131211132211133211201211203211205211206211207211208212002212004212005212007212009212010212011212012212018212019212020212021212022212023212026212028212030212031212032212102212104212106212108212109212110212111212113212114212116212118212119212120212121212124212125212126212127212129212130212132212135212137212138212139212141212147212149212150212151212152212155212156212157212158212160212162212164212166212167212168212171212173212174212175212176212177212178212180212200212201212202212207212208212209212211212212212213212215212216212217212218212219212300212301212304212305212308212309212400212403212407212409212410212414212415212500212501212700213000213001213002213003214000214001214003214004214005214008214011214014214015215000215001215002215003215006215008215009215010215012215013215014215015215016215019215020215022215023215024215025215026215027215028215029215100215101215102215103215104215201215202215203215207215208215209215210215211215212215213215214215215215216215217215218215220215222215223215224215300215301215302215305215306215307215310215400215401215402216000216001216002216004216005216007216008216009216011216012216100216101216103216104216105216106216109216110216112216113216114216115216200216203216204216205216206216207216210216211216212217000217001217002217006217007217008217009217012217013217014217015217016217017217018217019217020218000218001218002218003218004218005218006218007218012218013218015218016218018218019219000219001219100219101219105219106219108219112219113219116219117219119219120219123219124219125219129219132219200219201219203219204219205219500219501219502220002220003220004220005220006220100220101220102220103220104220105220107220109220116220117220118220120220121220122220123220125220126220127220128220130220131220132220141220142220144220145220146220147220148220149220204230000230001230004230005230006230008231000231001231002231003231100231103240000240002240003240004240005240006240008240009240011240012240013240015240016240017240018240019240101240102240105240301241001241002241003241004241005241201242000242001251200251201251300256000256005256006256007256008256100256101256102256103256104256105256106256108256109256111256114256115256117256118256119256120256121256123257000257001257002257003257004257005257008257009257010257011257013257014257016257017257019257021257023257024257025257027257028257029257031257033257036257037257038257039257041257042257043257045257046257047257048257050257051257052257054258000258001258003258004258005258009258010258011258012258013258014258015258019258020258022258023258025258026258027258028258030258031258032258034258036315101315103315104315105315106315107315108315109315110315111315112315202315204315205315207317201350002350003350005350006351000351001351100351101351102351103351105351106351107352000352001352002352003352004352006352007352008352009352010352011352012352013352014352015352016352017352300352301352500352501352502352503353102353103353104354000354001354003354006354008354012355001355002355003355004355005355007355009355010356001356003357002357003357004357006357007357008358000358004358005358007358008358009358010358013358014358015358016358017358019358021358023358024358025358026358027358030358031358033358036358039358040358043358044358046358050358051358052359001359003359007359008359011359100359102359103359108359110359112359113359114359115359116359118359200359202361002361003361006361007361009361010361011361013361300362000362002362003362004362005362006365100365102365103366000366001366200366201366202366401366403366404366406367001367400367401367402367403367404367500367501450000450003450004450005450006451000451002451200452000452001452002452100452101452200452300452301452500452501452503453002453003453100453101453102453103453104453105453107454000454001454004455001455003455004455007455008455013455016455017455018455020455025456000457002457003457004457005457008457009457011458002458005458008458009458010458011458012458013458015458017458018458019459000459002459004459005459006459009459101459102459104459105459106459108459109459110459112459115459116459117459122459123459124459125459127459128459129459131459132459136459137459138459139459141459143459146459148459149459150459151459152459153459154459155459158459159459160459161459162459164459165459166459201459202459205459206459208460000460001460002460003461000461001461004461005462000465101465102465104465105465106465107465108465109466000466001466002466003466005466006466008466010466012466013466100466101466102466103467000467001467002467003467005467008467009469000469002469006469008469010469011469100469102469103469104469105469106469108469109469200469201469202469300469301469302469303469306469307469308469309469310469312469313469315469316469317469318469320469321469322469323469324469400469401469402469403469404469405469500500100500200</data:TypeCodelist>
+<data:Theme>
+    
+<data:Code>LandUsePlans</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Nutzungsplanung (kantonal / kommunal)</data:Text>
+
+</data:Text>
+</data:Theme>
+
+</data:OtherLegend>
+<data:OtherLegend>
+    
+
+<data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FLandUsePlans%2F1%2F211106</data:SymbolRef>
+<data:LegendText>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landschaftsschutz 1</data:Text>
+</data:LocalisedText>
+
+</data:LegendText>
+<data:TypeCode>211106</data:TypeCode>
+<data:TypeCodelist>101000101002101003101004101005101006101007101008101009101012101100101101101102101103101104101105101106101107101108101109101110101111101112101113101116101117101118101120101123101124101125101200101201101204101205101206101207101209101210101211101212101213101214101215101216101217101218101219101220101221101222101223101224101225101226101227101228101229101230101231101233101236101237101238101239101240101241101242101300101301101302101303101304101305101306101307101309101310101311101312101313101400101401101402101403102000102001102003102004102005102006102007102008102009102010102011102012102013102014102016102017102018102100102101102200102201102203102204102205102206102207102208102211102212102213102214102215102218102219102220102221102222102223102227102229102236102239102240102241102242102243102244102245102246102247102248102300102301102302102303102305102306102308102309102310102311102312102313102314102315102316102317102318102321102322102323102324102400102401102402102403102404102405102406102407102408102409102411102412102500102501103000103200103201103202103205103206103207103209103300103301103303103304103305103308103309103310103400103401104000104002104003104004104006104007104009104100104101104102104103104105104106104108104200104202104203104204104205104207104209104210104211104212104214104215104217104218104220104223104224104300104301104303104304104305104306104307104900104903104906105001105100105101105200105201105203105300105301105303105304105306105400105402105403105404105405106102106201106202106203106204106206106207106208106209106210106211106212106215106300106301106302106303106304106306106307106309106310106311106313106314106315106316106318106319106322106323106324106325106326106327106329106400106401106402106405106406106408106409106410106411106412106414106415106416106418106501106502106503106504106505106600106601106602106603106901106902107201107202107204108000108001108100108200108202108203108300108303108304108305108400108401108402108500108501108502108503108700108701109000109100110000110001110002111001111004111006111007111009111010111014111015112002112005112006112007112008112009112011112013112014112017112018112021112022112023112026112028112029112031112032112033112034112037112038112041112045112052112054112056112057112058113000113002113003113005113006113007113008113009113010113011113013113014113015120000120002120003120005121102121105121106121107121108121109121110121111121112121113121200121201121202121203121204121300121301130000130002130004130005131000131001131002131003131005131006131008131009131010131011131013131014131015131016132000132001132002132004132006132007132008132010132011132012133000133001133002133005133006133007133008133009133011133012133013133015140400140401140500140501140502140503140504140505140605140701141000141002141005141006141007141008141010141011141012141100141200141400142000142101142102143001143002143007143008143009143010143011143012143014143015143016143101143102143103143104143105143200143300143302143401143402143403143405143406143407143409143411143413143500143501143502143503143504143507143508143509143600143602144001144002144003145000145001145005146000146003146005146008146010146011146012146017146019146022146023147000147001147002147003147004147006147100147200147202147203147204148000148001149000149002149004149100149101149102149103149104149105149106149200149201149203149204149300149301149400149401149402149404149405149502149503149504149506150000150001150002150003150004150006150007151001151005151008151011151014151017151018151100151101151102151103151105151200152000152101152109152110152111152113152114152116152119152120152121152122152123210004211001211002211004211005211006211008211100211101211102211103211104211105211106211107211110211111211112211113211114211115211121211122211123211124211125211126211127211128211129211130211131211132211133211201211203211205211206211207211208212002212004212005212007212009212010212011212012212018212019212020212021212022212023212026212028212030212031212032212102212104212106212108212109212110212111212113212114212116212118212119212120212121212124212125212126212127212129212130212132212135212137212138212139212141212147212149212150212151212152212155212156212157212158212160212162212164212166212167212168212171212173212174212175212176212177212178212180212200212201212202212207212208212209212211212212212213212215212216212217212218212219212300212301212304212305212308212309212400212403212407212409212410212414212415212500212501212700213000213001213002213003214000214001214003214004214005214008214011214014214015215000215001215002215003215006215008215009215010215012215013215014215015215016215019215020215022215023215024215025215026215027215028215029215100215101215102215103215104215201215202215203215207215208215209215210215211215212215213215214215215215216215217215218215220215222215223215224215300215301215302215305215306215307215310215400215401215402216000216001216002216004216005216007216008216009216011216012216100216101216103216104216105216106216109216110216112216113216114216115216200216203216204216205216206216207216210216211216212217000217001217002217006217007217008217009217012217013217014217015217016217017217018217019217020218000218001218002218003218004218005218006218007218012218013218015218016218018218019219000219001219100219101219105219106219108219112219113219116219117219119219120219123219124219125219129219132219200219201219203219204219205219500219501219502220002220003220004220005220006220100220101220102220103220104220105220107220109220116220117220118220120220121220122220123220125220126220127220128220130220131220132220141220142220144220145220146220147220148220149220204230000230001230004230005230006230008231000231001231002231003231100231103240000240002240003240004240005240006240008240009240011240012240013240015240016240017240018240019240101240102240105240301241001241002241003241004241005241201242000242001251200251201251300256000256005256006256007256008256100256101256102256103256104256105256106256108256109256111256114256115256117256118256119256120256121256123257000257001257002257003257004257005257008257009257010257011257013257014257016257017257019257021257023257024257025257027257028257029257031257033257036257037257038257039257041257042257043257045257046257047257048257050257051257052257054258000258001258003258004258005258009258010258011258012258013258014258015258019258020258022258023258025258026258027258028258030258031258032258034258036315101315103315104315105315106315107315108315109315110315111315112315202315204315205315207317201350002350003350005350006351000351001351100351101351102351103351105351106351107352000352001352002352003352004352006352007352008352009352010352011352012352013352014352015352016352017352300352301352500352501352502352503353102353103353104354000354001354003354006354008354012355001355002355003355004355005355007355009355010356001356003357002357003357004357006357007357008358000358004358005358007358008358009358010358013358014358015358016358017358019358021358023358024358025358026358027358030358031358033358036358039358040358043358044358046358050358051358052359001359003359007359008359011359100359102359103359108359110359112359113359114359115359116359118359200359202361002361003361006361007361009361010361011361013361300362000362002362003362004362005362006365100365102365103366000366001366200366201366202366401366403366404366406367001367400367401367402367403367404367500367501450000450003450004450005450006451000451002451200452000452001452002452100452101452200452300452301452500452501452503453002453003453100453101453102453103453104453105453107454000454001454004455001455003455004455007455008455013455016455017455018455020455025456000457002457003457004457005457008457009457011458002458005458008458009458010458011458012458013458015458017458018458019459000459002459004459005459006459009459101459102459104459105459106459108459109459110459112459115459116459117459122459123459124459125459127459128459129459131459132459136459137459138459139459141459143459146459148459149459150459151459152459153459154459155459158459159459160459161459162459164459165459166459201459202459205459206459208460000460001460002460003461000461001461004461005462000465101465102465104465105465106465107465108465109466000466001466002466003466005466006466008466010466012466013466100466101466102466103467000467001467002467003467005467008467009469000469002469006469008469010469011469100469102469103469104469105469106469108469109469200469201469202469300469301469302469303469306469307469308469309469310469312469313469315469316469317469318469320469321469322469323469324469400469401469402469403469404469405469500500100500200</data:TypeCodelist>
+<data:Theme>
+    
+<data:Code>LandUsePlans</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Nutzungsplanung (kantonal / kommunal)</data:Text>
+
+</data:Text>
+</data:Theme>
+
+</data:OtherLegend>
+<data:min_NS95>
+    <gml:Point gml:id="gml4">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml5">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>1</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:Map>
+    <data:LegalProvisions xsi:type="data:Document">
+        
+
+
+<data:DocumentType>LegalProvision</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>https%3A%2F%2Foereblex.bl.ch%2Fapi%2Fattachments%2F6128</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RRB vom 04.07.2017</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:OfficialNumber>Nr. 1024</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeindeverwaltung</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>www.arlesheim.ch</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2374%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2303%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung zum Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400.11</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fwww.lexfind.ch%2Fdtah%2F167348%2F2</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz über die Raumplanung</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Raumplanungsgesetz, RPG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SR 700</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.bk.admin.ch%2F</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+
+    </data:LegalProvisions>
+    <data:LegalProvisions xsi:type="data:Document">
+        
+
+
+<data:DocumentType>LegalProvision</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>https%3A%2F%2Foereblex.bl.ch%2Fapi%2Fattachments%2F5585</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Zonenreglement Siedlung (Stand 04.07.2017)</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:OfficialNumber>06/ZRS/3/0</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeindeverwaltung</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>www.arlesheim.ch</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2374%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2303%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung zum Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400.11</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fwww.lexfind.ch%2Fdtah%2F167348%2F2</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz über die Raumplanung</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Raumplanungsgesetz, RPG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SR 700</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.bk.admin.ch%2F</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+
+    </data:LegalProvisions>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeinde Arlesheim</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.arlesheim.ch</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+    <data:extensions>
+        <AreaUnit>m2</AreaUnit>
+    </data:extensions>
+</data:RestrictionOnLandownership>
+    
+
+<data:RestrictionOnLandownership>
+    <data:Information>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Strassenbaulinie</data:Text>
+</data:LocalisedText>
+
+    </data:Information>
+    <data:Theme>
+        
+<data:Code>ch.BL.CantonalBuildingLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Kantonale Baulinien</data:Text>
+
+</data:Text>
+    </data:Theme>
+    <data:TypeCode>0_0</data:TypeCode>
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2Fch.BL.CantonalBuildingLines%2F1%2F0_0</data:SymbolRef>
+    
+<data:Geometry>
+        
+<data:Line>
+    
+<gml:LineString gml:id="gml6">
+    <gml:pos>2613116.416 1260505.697</gml:pos>
+    <gml:pos>2613104.331 1260485.558</gml:pos>
+    <gml:pos>2613101.41117 1260480.92259</gml:pos>
+    <gml:pos>2613098.61221 1260476.2132</gml:pos>
+    <gml:pos>2613095.936 1260471.433</gml:pos>
+    <gml:pos>2613093.38421 1260466.58495</gml:pos>
+    <gml:pos>2613090.95866 1260461.67252</gml:pos>
+    <gml:pos>2613088.661 1260456.699</gml:pos>
+    <gml:pos>2613065.663 1260406.127</gml:pos>
+    <gml:pos>2613031.404 1260330.827</gml:pos>
+</gml:LineString>
+
+</data:Line>
+
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:MetadataOfGeographicalBaseData>
+        None
+    </data:MetadataOfGeographicalBaseData>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Tiefbauamt BL</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fdirektionen%2Fbau-und-umweltschutzdirektion%2Ftiefbauamt</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+</data:Geometry>
+    <data:Map>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FLAYERS%3Dch.BL.CantonalBuildingLines%26STYLES%3Ddefault%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+
+<data:LegendAtWeb>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic%26LAYER%3Dch.BL.CantonalBuildingLines%26FORMAT%3Dimage%2Fpng</data:LegendAtWeb>
+<data:min_NS95>
+    <gml:Point gml:id="gml7">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml8">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>1</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:Map>
+    <data:LegalProvisions xsi:type="data:Document">
+        
+
+
+<data:DocumentType>LegalProvision</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>https%3A%2F%2Foereblex.bl.ch%2Fapi%2Fattachments%2F3009</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RRB vom 28.09.1948</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:OfficialNumber>Nr. 3074</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>BUD GSK</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fdirektionen%2Fbau-und-umweltschutzdirektion%2Fgeneralsekretariat</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2374%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2303%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung zum Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400.11</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+
+    </data:LegalProvisions>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Tiefbauamt BL</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fdirektionen%2Fbau-und-umweltschutzdirektion%2Ftiefbauamt</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+    <data:extensions>
+        <LengthShare>3</LengthShare>
+        <LengthUnit>m</LengthUnit>
+    </data:extensions>
+</data:RestrictionOnLandownership>
+    
+
+<data:RestrictionOnLandownership>
+    <data:Information>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Empfindlichkeitsstufe ES II</data:Text>
+</data:LocalisedText>
+
+    </data:Information>
+    <data:Theme>
+        
+<data:Code>NoiseSensitivityLevels</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Lärmempfindlichkeitsstufen (in Nutzungszonen)</data:Text>
+
+</data:Text>
+    </data:Theme>
+    <data:TypeCode>ES_II</data:TypeCode>
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:AreaShare>572</data:AreaShare>
+    <data:PartInPercent>100.0</data:PartInPercent>
+    <data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FNoiseSensitivityLevels%2F1%2FES_II</data:SymbolRef>
+    
+<data:Geometry>
+        
+<data:Surface>
+    
+<gml:Polygon gml:id="gml9">
+    <gml:exterior>
+        <gml:LinearRing>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+            <gml:pos>2613090.617 1260507.554</gml:pos>
+            <gml:pos>2613122.953 1260507.946</gml:pos>
+            <gml:pos>2613125.062 1260504.535</gml:pos>
+            <gml:pos>2613109.594 1260481.211</gml:pos>
+            <gml:pos>2613104.44 1260472.676</gml:pos>
+            <gml:pos>2613099.702 1260463.821</gml:pos>
+            <gml:pos>2613095.343 1260454.784</gml:pos>
+            <gml:pos>2613086.786 1260436.139</gml:pos>
+            <gml:pos>2613071.73 1260403.314</gml:pos>
+            <gml:pos>2613056.746 1260370.577</gml:pos>
+            <gml:pos>2613054.615 1260366.014</gml:pos>
+            <gml:pos>2613046.127 1260347.315</gml:pos>
+            <gml:pos>2613037.218 1260328.141</gml:pos>
+            <gml:pos>2613036.706 1260328.397</gml:pos>
+            <gml:pos>2613032.039 1260318.429</gml:pos>
+            <gml:pos>2613027.215 1260308.52</gml:pos>
+            <gml:pos>2613022.393 1260299.375</gml:pos>
+            <gml:pos>2613017.146 1260290.438</gml:pos>
+            <gml:pos>2613011.307 1260281.762</gml:pos>
+            <gml:pos>2613004.953 1260273.708</gml:pos>
+            <gml:pos>2612998.075 1260265.891</gml:pos>
+            <gml:pos>2612993.243 1260261.119</gml:pos>
+            <gml:pos>2612993.762 1260265.706</gml:pos>
+            <gml:pos>2612998.025 1260295.004</gml:pos>
+            <gml:pos>2613004.615 1260340.865</gml:pos>
+            <gml:pos>2613009.289 1260365.438</gml:pos>
+            <gml:pos>2613015.84 1260385.419</gml:pos>
+            <gml:pos>2613026.854 1260381.456</gml:pos>
+            <gml:pos>2613033.569 1260379.04</gml:pos>
+            <gml:pos>2613047.279 1260414.424</gml:pos>
+            <gml:pos>2613058.126 1260442.325</gml:pos>
+            <gml:pos>2613059.029 1260444.653</gml:pos>
+            <gml:pos>2613052.112 1260446.775</gml:pos>
+            <gml:pos>2613049.911 1260447.466</gml:pos>
+            <gml:pos>2613068.532 1260532.094</gml:pos>
+            <gml:pos>2613075.374 1260531.796</gml:pos>
+            <gml:pos>2613075.37377 1260531.62546</gml:pos>
+            <gml:pos>2613075.37477 1260531.45493</gml:pos>
+            <gml:pos>2613075.37699 1260531.28441</gml:pos>
+            <gml:pos>2613075.38044 1260531.11391</gml:pos>
+            <gml:pos>2613075.38511 1260530.94343</gml:pos>
+            <gml:pos>2613075.391 1260530.773</gml:pos>
+            <gml:pos>2613075.44912 1260529.58211</gml:pos>
+            <gml:pos>2613075.56653 1260528.3956</gml:pos>
+            <gml:pos>2613075.74293 1260527.21641</gml:pos>
+            <gml:pos>2613075.97789 1260526.04749</gml:pos>
+            <gml:pos>2613076.27082 1260524.89172</gml:pos>
+            <gml:pos>2613076.621 1260523.752</gml:pos>
+            <gml:pos>2613077.05248 1260522.65949</gml:pos>
+            <gml:pos>2613077.53683 1260521.58936</gml:pos>
+            <gml:pos>2613078.0729 1260520.54419</gml:pos>
+            <gml:pos>2613078.6594 1260519.52646</gml:pos>
+            <gml:pos>2613079.29494 1260518.53861</gml:pos>
+            <gml:pos>2613079.978 1260517.583</gml:pos>
+            <gml:pos>2613080.69429 1260516.64948</gml:pos>
+            <gml:pos>2613081.45548 1260515.75219</gml:pos>
+            <gml:pos>2613082.25972 1260514.89328</gml:pos>
+            <gml:pos>2613083.10509 1260514.07482</gml:pos>
+            <gml:pos>2613083.98956 1260513.29877</gml:pos>
+            <gml:pos>2613084.911 1260512.567</gml:pos>
+            <gml:pos>2613085.59798 1260512.07184</gml:pos>
+            <gml:pos>2613086.30203 1260511.60126</gml:pos>
+            <gml:pos>2613087.02227 1260511.15584</gml:pos>
+            <gml:pos>2613087.75779 1260510.73615</gml:pos>
+            <gml:pos>2613088.50768 1260510.34271</gml:pos>
+            <gml:pos>2613089.271 1260509.976</gml:pos>
+            <gml:pos>2613089.57959 1260509.83335</gml:pos>
+            <gml:pos>2613089.89017 1260509.69505</gml:pos>
+            <gml:pos>2613090.20266 1260509.56114</gml:pos>
+            <gml:pos>2613090.517 1260509.43165</gml:pos>
+            <gml:pos>2613090.83314 1260509.30659</gml:pos>
+            <gml:pos>2613091.151 1260509.186</gml:pos>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+        </gml:LinearRing>
+    </gml:exterior>
+    <gml:interior>
+        <gml:LinearRing>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+            <gml:pos>2613090.617 1260507.554</gml:pos>
+            <gml:pos>2613122.953 1260507.946</gml:pos>
+            <gml:pos>2613125.062 1260504.535</gml:pos>
+            <gml:pos>2613109.594 1260481.211</gml:pos>
+            <gml:pos>2613104.44 1260472.676</gml:pos>
+            <gml:pos>2613099.702 1260463.821</gml:pos>
+            <gml:pos>2613095.343 1260454.784</gml:pos>
+            <gml:pos>2613086.786 1260436.139</gml:pos>
+            <gml:pos>2613071.73 1260403.314</gml:pos>
+            <gml:pos>2613056.746 1260370.577</gml:pos>
+            <gml:pos>2613054.615 1260366.014</gml:pos>
+            <gml:pos>2613046.127 1260347.315</gml:pos>
+            <gml:pos>2613037.218 1260328.141</gml:pos>
+            <gml:pos>2613036.706 1260328.397</gml:pos>
+            <gml:pos>2613032.039 1260318.429</gml:pos>
+            <gml:pos>2613027.215 1260308.52</gml:pos>
+            <gml:pos>2613022.393 1260299.375</gml:pos>
+            <gml:pos>2613017.146 1260290.438</gml:pos>
+            <gml:pos>2613011.307 1260281.762</gml:pos>
+            <gml:pos>2613004.953 1260273.708</gml:pos>
+            <gml:pos>2612998.075 1260265.891</gml:pos>
+            <gml:pos>2612993.243 1260261.119</gml:pos>
+            <gml:pos>2612993.762 1260265.706</gml:pos>
+            <gml:pos>2612998.025 1260295.004</gml:pos>
+            <gml:pos>2613004.615 1260340.865</gml:pos>
+            <gml:pos>2613009.289 1260365.438</gml:pos>
+            <gml:pos>2613015.84 1260385.419</gml:pos>
+            <gml:pos>2613026.854 1260381.456</gml:pos>
+            <gml:pos>2613033.569 1260379.04</gml:pos>
+            <gml:pos>2613047.279 1260414.424</gml:pos>
+            <gml:pos>2613058.126 1260442.325</gml:pos>
+            <gml:pos>2613059.029 1260444.653</gml:pos>
+            <gml:pos>2613052.112 1260446.775</gml:pos>
+            <gml:pos>2613049.911 1260447.466</gml:pos>
+            <gml:pos>2613068.532 1260532.094</gml:pos>
+            <gml:pos>2613075.374 1260531.796</gml:pos>
+            <gml:pos>2613075.37377 1260531.62546</gml:pos>
+            <gml:pos>2613075.37477 1260531.45493</gml:pos>
+            <gml:pos>2613075.37699 1260531.28441</gml:pos>
+            <gml:pos>2613075.38044 1260531.11391</gml:pos>
+            <gml:pos>2613075.38511 1260530.94343</gml:pos>
+            <gml:pos>2613075.391 1260530.773</gml:pos>
+            <gml:pos>2613075.44912 1260529.58211</gml:pos>
+            <gml:pos>2613075.56653 1260528.3956</gml:pos>
+            <gml:pos>2613075.74293 1260527.21641</gml:pos>
+            <gml:pos>2613075.97789 1260526.04749</gml:pos>
+            <gml:pos>2613076.27082 1260524.89172</gml:pos>
+            <gml:pos>2613076.621 1260523.752</gml:pos>
+            <gml:pos>2613077.05248 1260522.65949</gml:pos>
+            <gml:pos>2613077.53683 1260521.58936</gml:pos>
+            <gml:pos>2613078.0729 1260520.54419</gml:pos>
+            <gml:pos>2613078.6594 1260519.52646</gml:pos>
+            <gml:pos>2613079.29494 1260518.53861</gml:pos>
+            <gml:pos>2613079.978 1260517.583</gml:pos>
+            <gml:pos>2613080.69429 1260516.64948</gml:pos>
+            <gml:pos>2613081.45548 1260515.75219</gml:pos>
+            <gml:pos>2613082.25972 1260514.89328</gml:pos>
+            <gml:pos>2613083.10509 1260514.07482</gml:pos>
+            <gml:pos>2613083.98956 1260513.29877</gml:pos>
+            <gml:pos>2613084.911 1260512.567</gml:pos>
+            <gml:pos>2613085.59798 1260512.07184</gml:pos>
+            <gml:pos>2613086.30203 1260511.60126</gml:pos>
+            <gml:pos>2613087.02227 1260511.15584</gml:pos>
+            <gml:pos>2613087.75779 1260510.73615</gml:pos>
+            <gml:pos>2613088.50768 1260510.34271</gml:pos>
+            <gml:pos>2613089.271 1260509.976</gml:pos>
+            <gml:pos>2613089.57959 1260509.83335</gml:pos>
+            <gml:pos>2613089.89017 1260509.69505</gml:pos>
+            <gml:pos>2613090.20266 1260509.56114</gml:pos>
+            <gml:pos>2613090.517 1260509.43165</gml:pos>
+            <gml:pos>2613090.83314 1260509.30659</gml:pos>
+            <gml:pos>2613091.151 1260509.186</gml:pos>
+            <gml:pos>2613090.971 1260508.622</gml:pos>
+        </gml:LinearRing>
+    </gml:interior>
+</gml:Polygon>
+</data:Surface>
+
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:MetadataOfGeographicalBaseData>
+        None
+    </data:MetadataOfGeographicalBaseData>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeinde Arlesheim</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.arlesheim.ch</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+</data:Geometry>
+    <data:Map>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FLAYERS%3DNoiseSensitivityLevels%26STYLES%3Ddefault%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+
+<data:LegendAtWeb>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic%26LAYER%3DNoiseSensitivityLevels%26FORMAT%3Dimage%2Fpng</data:LegendAtWeb>
+<data:min_NS95>
+    <gml:Point gml:id="gml10">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml11">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>1</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:Map>
+    <data:LegalProvisions xsi:type="data:Document">
+        
+
+
+<data:DocumentType>LegalProvision</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>https%3A%2F%2Foereblex.bl.ch%2Fapi%2Fattachments%2F6125</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RRB vom 04.07.2017</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:OfficialNumber>Nr. 1024</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeindeverwaltung</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>www.arlesheim.ch</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F1337%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Umweltschutzgesetz Basel-Landschaft</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>USG BL</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 780</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fwww.lexfind.ch%2Fdtah%2F170108%2F2</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Lärmschutz-Verordnung</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>LSV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SR 814.41</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.bk.admin.ch%2F</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+
+    </data:LegalProvisions>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeinde Arlesheim</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.arlesheim.ch</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+    <data:extensions>
+        <AreaUnit>m2</AreaUnit>
+    </data:extensions>
+</data:RestrictionOnLandownership>
+    
+
+<data:RestrictionOnLandownership>
+    <data:Information>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>In Bauzonen</data:Text>
+</data:LocalisedText>
+
+    </data:Information>
+    <data:Theme>
+        
+<data:Code>ForestPerimeters</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Statische Waldgrenzen</data:Text>
+
+</data:Text>
+    </data:Theme>
+    <data:TypeCode>1</data:TypeCode>
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FForestPerimeters%2F1%2F1</data:SymbolRef>
+    
+<data:Geometry>
+        
+<data:Line>
+    
+<gml:LineString gml:id="gml12">
+    <gml:pos>2613007.115 1260415.705</gml:pos>
+    <gml:pos>2613002.98 1260408.844</gml:pos>
+    <gml:pos>2613016.872 1260388.557</gml:pos>
+    <gml:pos>2613015.84 1260385.419</gml:pos>
+    <gml:pos>2613018.788 1260384.358</gml:pos>
+    <gml:pos>2613026.854 1260381.456</gml:pos>
+    <gml:pos>2613042.243 1260403.963</gml:pos>
+    <gml:pos>2613038.939 1260420.199</gml:pos>
+    <gml:pos>2613049.914 1260447.426</gml:pos>
+    <gml:pos>2613055.005 1260470.846</gml:pos>
+    <gml:pos>2613068.532 1260532.094</gml:pos>
+    <gml:pos>2613070.333 1260532.016</gml:pos>
+    <gml:pos>2613075.374 1260531.796</gml:pos>
+    <gml:pos>2613075.39779 1260532.79676</gml:pos>
+    <gml:pos>2613075.46316 1260533.79567</gml:pos>
+    <gml:pos>2613075.57 1260534.791</gml:pos>
+    <gml:pos>2613075.71809 1260535.78091</gml:pos>
+    <gml:pos>2613075.9072 1260536.76381</gml:pos>
+    <gml:pos>2613076.137 1260537.738</gml:pos>
+    <gml:pos>2613084.801 1260576.445</gml:pos>
+    <gml:pos>2613089.325 1260596.571</gml:pos>
+    <gml:pos>2613089.48576 1260597.52802</gml:pos>
+    <gml:pos>2613089.6065 1260598.49091</gml:pos>
+    <gml:pos>2613089.687 1260599.458</gml:pos>
+    <gml:pos>2613089.72712 1260600.42773</gml:pos>
+    <gml:pos>2613089.72679 1260601.3983</gml:pos>
+    <gml:pos>2613089.686 1260602.368</gml:pos>
+    <gml:pos>2613089.53861 1260603.33069</gml:pos>
+    <gml:pos>2613089.35351 1260604.28685</gml:pos>
+    <gml:pos>2613089.131 1260605.235</gml:pos>
+    <gml:pos>2613088.8715 1260606.17339</gml:pos>
+    <gml:pos>2613088.57535 1260607.10087</gml:pos>
+    <gml:pos>2613088.243 1260608.016</gml:pos>
+    <gml:pos>2613089.556 1260613.917</gml:pos>
+    <gml:pos>2613088.651 1260614.115</gml:pos>
+    <gml:pos>2613084.659 1260614.985</gml:pos>
+    <gml:pos>2613091.383 1260646.8</gml:pos>
+    <gml:pos>2613091.66 1260648.575</gml:pos>
+    <gml:pos>2613094.543 1260667.15</gml:pos>
+</gml:LineString>
+
+</data:Line>
+
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:MetadataOfGeographicalBaseData>
+        None
+    </data:MetadataOfGeographicalBaseData>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Amt für Wald beider Basel</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fdirektionen%2Fvolkswirtschafts-und-gesundheitsdirektion%2Famt-fur-wald</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+</data:Geometry>
+    <data:Map>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FLAYERS%3DForestPerimeters%26STYLES%3Ddefault%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+
+<data:LegendAtWeb>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic%26LAYER%3DForestPerimeters%26FORMAT%3Dimage%2Fpng</data:LegendAtWeb>
+<data:min_NS95>
+    <gml:Point gml:id="gml13">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml14">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>1</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:Map>
+    <data:LegalProvisions xsi:type="data:Document">
+        
+
+
+<data:DocumentType>LegalProvision</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>https%3A%2F%2Foereblex.bl.ch%2Fapi%2Fattachments%2F2872</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verfügung vom 09.06.2004</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:OfficialNumber>Nr. 133</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>VGD GS</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fdirektionen%2Fvolkswirtschafts-und-gesundheitsdirektion%2Fgeneralsekretariat</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F240%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Kantonales Waldgesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>kWaG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 570</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2033%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Kantonale Waldverordnung</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>kWaV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 570.11</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fwww.lexfind.ch%2Fdtah%2F162670%2F2</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz über den Wald</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Waldgesetz, WaG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SR 921.0</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.bk.admin.ch%2F</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fwww.lexfind.ch%2Fdtah%2F157013%2F2</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung über den Wald</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Waldverordnung, WaV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SR 921.01</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.bk.admin.ch%2F</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+
+    </data:LegalProvisions>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Amt für Wald beider Basel</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fdirektionen%2Fvolkswirtschafts-und-gesundheitsdirektion%2Famt-fur-wald</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+    <data:extensions>
+        <LengthShare>3</LengthShare>
+        <LengthUnit>m</LengthUnit>
+    </data:extensions>
+</data:RestrictionOnLandownership>
+    
+
+<data:RestrictionOnLandownership>
+    <data:Information>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Waldbaulinie</data:Text>
+</data:LocalisedText>
+
+    </data:Information>
+    <data:Theme>
+        
+<data:Code>ForestDistanceLines</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>Waldabstandslinien</data:Text>
+
+</data:Text>
+    </data:Theme>
+    <data:TypeCode>1_0</data:TypeCode>
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:SymbolRef>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fimage%2Fsymbol%2FForestDistanceLines%2F1%2F1_0</data:SymbolRef>
+    
+<data:Geometry>
+        
+<data:Line>
+    
+<gml:LineString gml:id="gml15">
+    <gml:pos>2613002.311 1260270.705</gml:pos>
+    <gml:pos>2613006.75 1260297.892</gml:pos>
+    <gml:pos>2613004.481 1260298.942</gml:pos>
+    <gml:pos>2613006.163 1260302.577</gml:pos>
+    <gml:pos>2613002.529 1260304.26</gml:pos>
+    <gml:pos>2613004.687 1260308.912</gml:pos>
+    <gml:pos>2613008.474 1260317.215</gml:pos>
+    <gml:pos>2613019.474 1260379.731</gml:pos>
+    <gml:pos>2613039.856 1260370.356</gml:pos>
+    <gml:pos>2613055.494 1260410.716</gml:pos>
+    <gml:pos>2613048.19 1260414.013</gml:pos>
+    <gml:pos>2613061.672 1260443.842</gml:pos>
+    <gml:pos>2613068.324 1260464.727</gml:pos>
+</gml:LineString>
+
+</data:Line>
+
+    <data:Lawstatus>
+        
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+    </data:Lawstatus>
+    <data:MetadataOfGeographicalBaseData>
+        None
+    </data:MetadataOfGeographicalBaseData>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeinde Arlesheim</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.arlesheim.ch</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+</data:Geometry>
+    <data:Map>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FLAYERS%3DForestDistanceLines%26STYLES%3Ddefault%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+
+<data:LegendAtWeb>https%3A%2F%2Fgeoview.bl.ch%2Fmain%2Foereb%2Fmapservproxy%3FSERVICE%3DWMS%26VERSION%3D1.1.1%26REQUEST%3DGetLegendGraphic%26LAYER%3DForestDistanceLines%26FORMAT%3Dimage%2Fpng</data:LegendAtWeb>
+<data:min_NS95>
+    <gml:Point gml:id="gml16">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml17">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>1</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:Map>
+    <data:LegalProvisions xsi:type="data:Document">
+        
+
+
+<data:DocumentType>LegalProvision</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>https%3A%2F%2Foereblex.bl.ch%2Fapi%2Fattachments%2F6155</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RRB vom 02.12.1975</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:OfficialNumber>Nr. 3772</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeindeverwaltung</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>www.arlesheim.ch</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2374%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2Fpdf_file_with_annex%2F2303%3Flocale%3Dde</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Verordnung zum Raumplanungs- und Baugesetz</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>RBV</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SGS 400.11</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Landeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.baselland.ch%2Fpolitik-und-behorden%2Fbesondere-behorden%2Flandeskanzlei</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+<data:Reference xsi:type="data:Document">
+    
+
+
+<data:DocumentType>Law</data:DocumentType>
+<data:TextAtWeb>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fwww.lexfind.ch%2Fdtah%2F162670%2F2</data:Text>
+</data:LocalisedText>
+
+</data:TextAtWeb>
+<data:Lawstatus>
+    
+<data:Code>inForce</data:Code>
+<data:Text>
+    
+
+<data:Language>de</data:Language>
+<data:Text>in Kraft</data:Text>
+
+</data:Text>
+</data:Lawstatus>
+
+<data:Title>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundesgesetz über den Wald</data:Text>
+</data:LocalisedText>
+
+</data:Title>
+<data:Abbreviation>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Waldgesetz, WaG</data:Text>
+</data:LocalisedText>
+
+</data:Abbreviation>
+<data:OfficialNumber>SR 921.0</data:OfficialNumber>
+<data:Canton>BL</data:Canton>
+<data:ResponsibleOffice>
+    
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Bundeskanzlei</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>https%3A%2F%2Fwww.bk.admin.ch%2F</data:OfficeAtWeb>
+
+</data:ResponsibleOffice>
+
+</data:Reference>
+
+    </data:LegalProvisions>
+    <data:ResponsibleOffice>
+        
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemeinde Arlesheim</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.arlesheim.ch</data:OfficeAtWeb>
+
+    </data:ResponsibleOffice>
+    <data:extensions>
+        <LengthShare>40</LengthShare>
+        <LengthUnit>m</LengthUnit>
+    </data:extensions>
+</data:RestrictionOnLandownership>
+    <data:PlanForLandRegister>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeowms.bl.ch%2F%3FSTYLES%3Ddefault%26LAYERS%3Dgrundbuchplan_gebaeude_nicht_gefuellt_group%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+<data:min_NS95>
+    <gml:Point gml:id="gml18">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml19">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>0</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:PlanForLandRegister>
+    <data:PlanForLandRegisterMainPage>
+        
+<data:ReferenceWMS>https%3A%2F%2Fgeowms.bl.ch%2F%3FSTYLES%3Ddefault%26LAYERS%3Dgrundbuchplan_group%26SERVICE%3DWMS%26FORMAT%3Dimage%252Fpng%26REQUEST%3DGetMap%26SRS%3DEPSG%253A2056%26HEIGHT%3D280%26WIDTH%3D493%26VERSION%3D1.1.1%26BBOX%3D2613003.00046%252C1260353.56221%252C2613062.83054%252C1260387.54279</data:ReferenceWMS>
+<data:min_NS95>
+    <gml:Point gml:id="gml20">
+        <gml:pos>2613003.00046 1260353.56221</gml:pos>
+    </gml:Point>
+</data:min_NS95>
+<data:max_NS95>
+    <gml:Point gml:id="gml21">
+        <gml:pos>2613062.83054 1260387.54279</gml:pos>
+    </gml:Point>
+</data:max_NS95>
+<data:layerIndex>0</data:layerIndex>
+<data:layerOpacity>1.0</data:layerOpacity>
+
+    </data:PlanForLandRegisterMainPage>
+</data:RealEstate>
+        
+<data:ExclusionOfLiability xmlns="https://schemas.geo.admin.ch/V_D/OeREB/ExtractData.xsd">
+    <data:Title>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Haftungsausschluss Kataster der belasteten Standorte (KbS)</data:Text>
+</data:LocalisedText>
+
+    </data:Title>
+    <data:Content>
+        
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Der Kataster der belasteten Standorte (KbS) wurde anhand der vom Bundesamt für Umwelt BAFU festgelegten Kriterien erstellt und wird fortwährend aufgrund neuer Erkenntnisse (z.B. Untersuchungen) aktualisiert. Die im KbS eingetragenen Flächen können vom tatsächlichen Ausmass der Belastung abweichen. Erscheint ein Grundstück nicht im KbS, besteht keine absolute Gewähr, dass das Areal frei von jeglichen Abfall- oder Schadstoffbelastungen ist. Bahnbetrieblich, militärisch und für die Luftfahrt genutzte Standorte liegen im Zuständigkeitsbereich des Bundes. Für weitere Informationen wenden Sie sich an die kantonale Altlastenfachstelle, Amt für Umweltschutz und Energie (www.aue.bl.ch).</data:Text>
+</data:LocalisedText>
+
+    </data:Content>
+</data:ExclusionOfLiability>
+        <data:PLRCadastreAuthority>
+            
+<data:Name>
+    
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Amt für Geoinformation</data:Text>
+</data:LocalisedText>
+
+</data:Name>
+<data:OfficeAtWeb>http%3A%2F%2Fwww.agi.bl.ch</data:OfficeAtWeb>
+<data:Street>Mühlemattstrasse</data:Street>
+<data:Number>36</data:Number>
+<data:PostalCode>4410</data:PostalCode>
+<data:City>Liestal</data:City>
+
+        </data:PLRCadastreAuthority>
+        <data:Certification>
+            
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>Gemäss § 6 KÖREBKV (SGS 211.59)</data:Text>
+</data:LocalisedText>
+
+        </data:Certification>
+        <data:CertificationAtWeb>
+            
+
+<data:LocalisedText>
+    <data:Language>de</data:Language>
+    <data:Text>http%3A%2F%2Fbl.clex.ch%2Ffrontend%2Fversions%2F2031</data:Text>
+</data:LocalisedText>
+
+        </data:CertificationAtWeb>
+    </data:Extract>
+</GetExtractByIdResponse>

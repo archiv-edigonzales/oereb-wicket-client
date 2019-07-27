@@ -36,6 +36,8 @@ dependencies {
     implementation 'de.agilecoders.wicket:wicket-bootstrap-core:3.0.0-M11' // siehe pom.xml des entsprechenden branches   
     implementation 'de.agilecoders.wicket:wicket-bootstrap-extensions:3.0.0-M11' 
     implementation 'org.wicketstuff:wicketstuff-annotation:8.4.0'
+    implementation 'org.wicketstuff:wicketstuff-openlayers3:8.4.0'
+    implementation 'org.wicketstuff:wicketstuff-openlayers3-bootstrap:8.4.0'
     
     
     compile group: 'javax.xml.bind',name:'jaxb-api', version:'2.3.0'
@@ -81,7 +83,7 @@ task jaxb {
         ) {
             schema(dir: "src/main/xsd", includes: "OeREB/**/*.xsd,gml/3.2/gml.xsd")
             binding(dir: "src/main/xjb", includes: "global.xjb,OeREB.xjb,xmldsig-core-schema.xjb,gml.xjb,iso-19139.xjb,xlink.xjb")
-            arg(value: '-verbose')
+            //arg(value: '-verbose')
         }
     }
 }

@@ -65,7 +65,6 @@ public class HomePage extends WebPage {
         Form<HomePage> form = new Form<HomePage>("form", new CompoundPropertyModel<HomePage>(this)) {
             @Override
             protected void onSubmit() {
-                //setResponsePage(SecondPage.class);
                 System.out.println("Form submitted.");
                 System.out.println(egrid);
                 

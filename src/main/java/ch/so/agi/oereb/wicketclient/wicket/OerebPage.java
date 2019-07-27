@@ -31,10 +31,15 @@ import de.agilecoders.wicket.core.markup.html.bootstrap.tabs.TextContentTab;
 
 @WicketHomePage
 public class OerebPage extends WebPage {
+    private static final long serialVersionUID = 1L;
+
     @SpringBean
     ExtractService extractService;
     
     private String egrid = "CH158782774974";
+    // CH944982786913
+    // CH938278494529
+    
     
 //    private List<ThemeType> concernedThemes = new ArrayList<ThemeType>();
 
@@ -54,25 +59,10 @@ public class OerebPage extends WebPage {
             protected void onSubmit() {
                 System.out.println("Form submitted.");
                 System.out.println(egrid);
-                
                 try {
                     GetExtractByIdResponse extractResponse = extractService.getExtractByEgrid(egrid);
-                    
-                    List<ThemeType> concernedThemes = extractResponse.getValue().getExtract().getValue().getConcernedTheme();
-                    
-                    ListView concernedThemesListView = new ListView("concernedThemes", concernedThemes) {
-                        @Override
-                        protected void populateItem(ListItem item) {
-                            ThemeType theme = (ThemeType) item.getModelObject();
-                            item.add(new Label("themeText", theme.getText().getText()));
-                            item.add(new Label("themeCode", theme.getCode()));
-                        }
-                    };
-                    
-                    this.getParent().replace(concernedThemesListView);
-
-
-                } catch (IOException e) {                    
+                    setResponsePage(new ExtractPage(extractResponse));
+                } catch (IOException e) {
                     error(e.getMessage());
                     e.printStackTrace();
                 }
@@ -84,18 +74,7 @@ public class OerebPage extends WebPage {
 
         TextField<String> egridField = new TextField<String>("egrid"); 
         form.add(egridField);
-        
-        
-        add(new ListView("concernedThemes", new ArrayList<ThemeType>()) {
-            @Override
-            protected void populateItem(ListItem item) {
-                ThemeType theme = (ThemeType) item.getModelObject();
-                item.add(new Label("themeText", theme.getText().getText()));
-                item.add(new Label("themeCode", theme.getCode()));
-            }
-        });
-        
-        
+       
         IModel timeStampModel = new Model<String>(){
             @Override
             public String getObject() {

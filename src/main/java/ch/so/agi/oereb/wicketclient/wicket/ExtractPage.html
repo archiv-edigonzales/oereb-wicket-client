@@ -1,0 +1,75 @@
+<html wicket:id="html" xmlns:wicket="http://wicket.apache.org">
+    <head>
+        <meta charset="utf-8">
+        <title>ÖREB Web Client</title>
+        <meta wicket:id="viewport">
+        <meta wicket:id="description">
+        <meta wicket:id="author">
+        <meta wicket:id="ie-edge">
+    </head>
+    <body>
+        <div class="container">
+            <img wicket:id="cantonalLogo"/>
+            <img wicket:id="municipalityLogo"/>
+
+            <br>
+            <br>
+            
+            <div>
+                GB-Nr: <span wicket:id="realEstateNumber"></span>
+                <br>
+                E-EGRID: <span wicket:id="egrid"></span>
+                <br>
+                Gemeinde: <span wicket:id="municipality"></span>
+            </div>
+            
+            <br>
+            <br>
+
+            <h4>Betroffene Themen:</h4>
+            <div wicket:id="concernedThemes" height="100">
+                <span wicket:id="themeText"></span> (<span wicket:id="themeCode"></span>)
+            </div>
+            
+            <br>
+            <br>
+            
+            <h4>Nicht betroffene Themen:</h4>
+            <div wicket:id="notConcernedThemes">
+                <span wicket:id="themeText"></span> (<span wicket:id="themeCode"></span>)
+            </div>
+
+            <br>
+            <br>
+            
+            <h4>Keine Daten vorhanden:</h4>
+            <div wicket:id="themesWithoutData">
+                <span wicket:id="themeText"></span> (<span wicket:id="themeCode"></span>)
+            </div>
+
+            <br>
+            <br>
+
+            <h4>ÖREB:</h4>
+            <div wicket:id="restrictionsOnLandownership">
+                <b wicket:id="themeText"></b> <br>
+                Typ: <i wicket:id="plrInformation"></i><br>
+                Symbol: <img wicket:id="plrSymbol"/><br>
+                Rechtsvorschriften:<br>
+                <ul>
+                    <div wicket:id="legalProvisions">
+	                    <!--<li><span wicket:id="legalProvisionTitle"></span></li>-->
+	                    <li><a wicket:id="legalProvisionLink"></a></li>
+                    </div>
+                </ul>
+                <hr>
+            </div>
+
+
+            
+            <div wicket:id="map" style="height: 600px; margin-top: 1em; border: 1px solid #a9a9a9">[MAP]</div>
+            
+  
+        </div>
+    </body>
+</html>
