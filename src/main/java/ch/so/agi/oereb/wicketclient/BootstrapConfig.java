@@ -26,6 +26,7 @@ public class BootstrapConfig extends WicketBootStandardWebApplication {
         listener.addAcceptedOrigin("http://oereb.catais.org");
         listener.addAcceptedOrigin("https://oereb.catais.org");
         
+        getRequestCycleListeners().add(listener);
 //        getRequestCycleListeners().add(new CsrfPreventionRequestCycleListener().addAcceptedOrigin("http://oereb.catais.org")); 
 //        getRequestCycleListeners().add(new CsrfPreventionRequestCycleListener().addAcceptedOrigin("https://oereb.catais.org")); 
         
