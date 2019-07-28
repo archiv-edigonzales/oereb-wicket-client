@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = 'wicket-client'
+rootProject.name = 'oereb-client'

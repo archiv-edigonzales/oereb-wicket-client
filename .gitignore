@@ -1,6 +1,8 @@
+version.txt
 .sts4-cache/
 
 src/main/resources/templates/version.txt
+src/main/resources/static/version.txt
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
