@@ -1,7 +1,10 @@
 package ch.so.agi.oereb.wicketclient;
 
+import java.util.Iterator;
+
 import org.apache.wicket.RuntimeConfigurationType;
 import org.apache.wicket.protocol.http.CsrfPreventionRequestCycleListener;
+import org.apache.wicket.request.cycle.IRequestCycleListener;
 import org.springframework.stereotype.Component;
 
 import com.giffing.wicket.spring.boot.starter.app.WicketBootStandardWebApplication;
@@ -19,10 +22,22 @@ public class BootstrapConfig extends WicketBootStandardWebApplication {
 //            getDebugSettings().setComponentPathAttributeName("wicketpath");
 //        }
         
-        getRequestCycleListeners().add(new CsrfPreventionRequestCycleListener().addAcceptedOrigin("catais.org")); 
+        //getRequestCycleListeners().add(new CsrfPreventionRequestCycleListener().addAcceptedOrigin("catais.org")); 
         
         
         BootstrapSettings settings = new BootstrapSettings();
         Bootstrap.install(this, settings);
+        
+        Iterator<IRequestCycleListener> it = getRequestCycleListeners().iterator();
+        while(it.hasNext()) {
+            Object listener = it.next();
+            if (listener instanceof CsrfPreventionRequestCycleListener) {
+                System.out.println(listener.getClass());
+                
+                CsrfPreventionRequestCycleListener csrfListener = (CsrfPreventionRequestCycleListener) listener;
+            }
+            
+            
+        }
     }
 }
