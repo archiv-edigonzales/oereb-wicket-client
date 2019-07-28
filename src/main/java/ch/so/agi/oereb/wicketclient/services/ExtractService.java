@@ -46,15 +46,15 @@ public class ExtractService {
         StreamSource xmlSource = new StreamSource(xmlFile);
 
         GetExtractByIdResponse obj = (GetExtractByIdResponse) marshaller.unmarshal(xmlSource);
-        logger.info(obj.getValue().getExtract().getValue().getExtractIdentifier());
-        logger.info(obj.getValue().getExtract().getValue().getRealEstate().getMunicipality());
+//        logger.info(obj.getValue().getExtract().getValue().getExtractIdentifier());
+//        logger.info(obj.getValue().getExtract().getValue().getRealEstate().getMunicipality());
         
         List<ThemeType> concernedThemes = obj.getValue().getExtract().getValue().getConcernedTheme();
-        for (ThemeType theme : concernedThemes) {
-            logger.info(theme.getCode());
-            logger.info(theme.getText().getText());
-            logger.info("-----");
-        }
+//        for (ThemeType theme : concernedThemes) {
+//            logger.info(theme.getCode());
+//            logger.info(theme.getText().getText());
+//            logger.info("-----");
+//        }
 
         return obj;        
     }

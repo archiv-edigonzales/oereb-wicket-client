@@ -1,6 +1,7 @@
 package ch.so.agi.oereb.wicketclient.wicket;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -62,7 +63,7 @@ public class OerebPage extends WebPage {
                 try {
                     GetExtractByIdResponse extractResponse = extractService.getExtractByEgrid(egrid);
                     setResponsePage(new ExtractPage(extractResponse));
-                } catch (IOException e) {
+                } catch (IOException | URISyntaxException e) {
                     error(e.getMessage());
                     e.printStackTrace();
                 }

@@ -1,6 +1,9 @@
 package ch.so.agi.oereb.wicketclient.wicket;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -10,11 +13,9 @@ import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.image.ExternalImage;
-import org.apache.wicket.markup.html.image.Image;
 import org.apache.wicket.markup.html.link.ExternalLink;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
-import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 import org.wicketstuff.openlayers3.DefaultOpenLayersMap;
 import org.wicketstuff.openlayers3.api.Extent;
@@ -29,12 +30,21 @@ import org.wicketstuff.openlayers3.api.source.tile.TileWms;
 
 import com.google.common.collect.ImmutableMap;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.client.utils.URLEncodedUtils;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.util.UriComponentsBuilder;
+
 import ch.ehi.oereb.schemas.oereb._1_0.extract.GetExtractByIdResponse;
 import ch.ehi.oereb.schemas.oereb._1_0.extractdata.DocumentBaseType;
 import ch.ehi.oereb.schemas.oereb._1_0.extractdata.DocumentType;
 import ch.ehi.oereb.schemas.oereb._1_0.extractdata.ExtractType;
 import ch.ehi.oereb.schemas.oereb._1_0.extractdata.RestrictionOnLandownershipType;
 import ch.ehi.oereb.schemas.oereb._1_0.extractdata.ThemeType;
+import ch.so.agi.oereb.wicketclient.openlayers3.api.layer.ImageLayer;
+import ch.so.agi.oereb.wicketclient.openlayers3.api.source.single.ImageWms;
+import ch.so.agi.oereb.wicketclient.projection.ApproxSwissProj;
+import ch.so.agi.oereb.wicketclient.projection.SphericalMercator;
 import de.agilecoders.wicket.core.markup.html.bootstrap.html.HtmlTag;
 import de.agilecoders.wicket.core.markup.html.bootstrap.html.IeEdgeMetaTag;
 import de.agilecoders.wicket.core.markup.html.bootstrap.html.MetaTag;
@@ -46,7 +56,7 @@ public class ExtractPage extends WebPage {
     GetExtractByIdResponse extractResponse;
     
     @SuppressWarnings("unchecked")
-    public ExtractPage(GetExtractByIdResponse extractResponse) throws UnsupportedEncodingException {
+    public ExtractPage(GetExtractByIdResponse extractResponse) throws UnsupportedEncodingException, URISyntaxException {
         this.extractResponse = extractResponse;
         
         add(new HtmlTag("html"));
@@ -106,6 +116,9 @@ public class ExtractPage extends WebPage {
         };
         add(themesWithoutDataListView);
         
+        // TODO: Gruppierung der ÖREB.
+        // Inklusive dazugehöriger Dokumente (Rechtsvorschriften, Gesetze, ...)
+        
         List<RestrictionOnLandownershipType> restrictionsOnLandownership = extractType.getRealEstate().getRestrictionOnLandownership();
         ListView restrictionsOnLandownershipListView = new ListView("restrictionsOnLandownership", restrictionsOnLandownership) {
             private static final long serialVersionUID = 1L;
@@ -158,63 +171,97 @@ public class ExtractPage extends WebPage {
 //                    DocumentType documentType = (DocumentType) it.next();
 //                    System.out.println(documentType.getDocumentType());
 //                    System.out.println(documentType.getTextAtWeb().getLocalisedText().get(0).getText());
-//                    System.out.println(documentType.getTitle().getLocalisedText().get(0).getText());  
+//                    System.out.println(documentType.getTitle().getLocalisedText().get(0).getText()); 
+//                    
+//                    documentType.getReference()
 //                }
             }
         };
         add(restrictionsOnLandownershipListView);
 
+        String planForLandRegisterUrl = java.net.URLDecoder.decode(new String(extractType.getRealEstate().getPlanForLandRegister().getReferenceWMS()).trim(), "UTF-8");
         
-        
-        
-        
-        System.out.println(java.net.URLDecoder.decode(new String(extractType.getRealEstate().getPlanForLandRegisterMainPage().getReferenceWMS()).trim(), "UTF-8"));
+//        MultiValueMap<String, String> planForLandRegisterParams = UriComponentsBuilder.fromUriString(planForLandRegisterUrl).build().getQueryParams();
+//        List<String> param1 = planForLandRegisterParams..get("bbox");
+//        List<String> param2 = planForLandRegisterParams.get("BBOX");
+//        System.out.println("param2: " + param2.get(0));
 
-        System.out.println(extractType.getRealEstate().getRestrictionOnLandownership().get(0).getTheme().getText().getText());
-        System.out.println(extractType.getRealEstate().getRestrictionOnLandownership().get(0).getInformation().getLocalisedText().get(0).getText());
-        System.out.println(extractType.getRealEstate().getRestrictionOnLandownership().get(0).getMap().getReferenceWMS());
+        String planForLandRegisterBbox = null;
+        String planForLandRegisterLayers = null;
+        List<NameValuePair> planForLandRegisterUrlParams = URLEncodedUtils.parse(new URI(planForLandRegisterUrl), Charset.forName("UTF-8"));
+        for (NameValuePair param : planForLandRegisterUrlParams) {
+            if (param.getName().equalsIgnoreCase("BBOX")) {
+                planForLandRegisterBbox = param.getValue();
+            }
+            if (param.getName().equalsIgnoreCase("LAYERS")) {
+                planForLandRegisterLayers = param.getValue();
+            } 
+            System.out.println(param.getName() + " : " + param.getValue());
+        }
+
+        Extent planForLandRegisterExtent = transformBbox(planForLandRegisterBbox);
+        Coordinate mapCenter = new Coordinate(
+                    planForLandRegisterExtent.getMinimum().getX().floatValue() + (planForLandRegisterExtent.getMaximum().getX().floatValue() - planForLandRegisterExtent.getMinimum().getX().floatValue()) / 2, 
+                    planForLandRegisterExtent.getMinimum().getY().floatValue() + (planForLandRegisterExtent.getMaximum().getY().floatValue() - planForLandRegisterExtent.getMinimum().getY().floatValue()) / 2);
+        System.out.println(mapCenter);
+//        params.
         
-        String url = extractType.getRealEstate().getRestrictionOnLandownership().get(0).getMap().getReferenceWMS();
-        String decodedUrl = java.net.URLDecoder.decode(url.trim(), "UTF-8");
-        System.out.println(decodedUrl);
+//        System.out.println(java.net.URLDecoder.decode(new String(extractType.getRealEstate().getPlanForLandRegisterMainPage().getReferenceWMS()).trim(), "UTF-8"));
+//
+//        System.out.println(extractType.getRealEstate().getRestrictionOnLandownership().get(0).getTheme().getText().getText());
+//        System.out.println(extractType.getRealEstate().getRestrictionOnLandownership().get(0).getInformation().getLocalisedText().get(0).getText());
+//        System.out.println(extractType.getRealEstate().getRestrictionOnLandownership().get(0).getMap().getReferenceWMS());
+//        
+//        String url = extractType.getRealEstate().getRestrictionOnLandownership().get(0).getMap().getReferenceWMS();
+//        String decodedUrl = java.net.URLDecoder.decode(url.trim(), "UTF-8");
+//        System.out.println(decodedUrl);
         
         add(new DefaultOpenLayersMap("map",
-                // create the model for our map
                 Model.of(new Map(
-                        // list of layers
                         Arrays.<Layer>asList(
-                                // a new tile layer with the map of the world
-                                new Tile("Open Street Maps", new Osm()),
+                                //new Tile("Open Street Maps", new Osm()),
                                 new Tile("USA", new TileWms("https://ahocevar.com/geoserver/wms",
                                         ImmutableMap.of("LAYERS", "topp:states", "VERSION", "1.1.1"))),
-                                new Tile("Grunbuchplan", new TileWms("https://geowms.bl.ch/",
-                                        ImmutableMap.of("LAYERS", "grundbuchplan_group", "VERSION", "1.1.1")))
-                                ),
-                        // view for this map
-                        new View(new Coordinate(847738.6,6022968.6), 10)))));
-        
-        
-//        Extent extent = new Extent();
-//        extent.setMinimum(new LongLat(new Coordinate(2613003.00046,1260353.56221), "EPSG:2056"));
-//        extent.setMaximum(new LongLat(new Coordinate(2613062.83054,1260387.54279), "EPSG:2056"));
-
-//        add(new DefaultOpenLayersMap("map",
-//                Model.of(new Map(
-//                        Arrays.<Layer>asList(
 //                                new Tile("Grundbuchplan", new TileWms("https://geowms.bl.ch/",
 //                                        ImmutableMap.of("LAYERS", "grundbuchplan_group", "VERSION", "1.1.1")))
-//                                ),
-//                        new View(new Coordinate(2613030, 1260365), 2, 10, "EPSG:2056", extent)))));
-//
-////        Extent extent = new Extent();
-////        extent.setMinimum(new LongLat(new Coordinate(2613003.00046,1260353.56221), "EPSG:2056"));
-////        extent.setMaximum(new LongLat(new Coordinate(2613062.83054,1260387.54279), "EPSG:2056"));
-//        View view = new View(new Coordinate(2613030, 1260365), 2, 10, "EPSG:2056", extent);
-//        System.out.println(view.renderJs());
-
-        
+                                new ImageLayer("Grundbuchplan", new ImageWms("https://geowms.bl.ch/", 
+                                        ImmutableMap.of("LAYERS", "grundbuchplan_group", "VERSION", "1.1.1")))
+                                
+                                ),
+                        new View(mapCenter, 19)))));
     }        
 
     // 2613003.00046 1260353.56221 2613062.83054 1260387.54279
+    
+    private Extent transformBbox(String bbox) {
+        String[] bboxArray = bbox.split(",");
+        double xMinLV95 = Double.valueOf(bboxArray[0]);
+        double yMinLV95 = Double.valueOf(bboxArray[1]);
+        double xMaxLV95 = Double.valueOf(bboxArray[2]);
+        double yMaxLV95 = Double.valueOf(bboxArray[3]);
+        
+        double[] minXYWgs84 = ApproxSwissProj.LV95toWGS84(xMinLV95, yMinLV95, 500);
+        double[] maxXYWgs84 = ApproxSwissProj.LV95toWGS84(xMaxLV95, yMaxLV95, 500);
+        
+//        System.out.println(minXYWgs84[0]);
+//        System.out.println(minXYWgs84[1]);
+        
+        double yMinMercator = SphericalMercator.lat2y(minXYWgs84[0]);
+        double xMinMercator = SphericalMercator.lon2x(minXYWgs84[1]);
+        
+        double yMaxMercator = SphericalMercator.lat2y(maxXYWgs84[0]);
+        double xMaxMercator = SphericalMercator.lon2x(maxXYWgs84[1]);
+
+//        System.out.println(xMinMercator);
+//        System.out.println(yMinMercator);
+//        System.out.println(xMaxMercator);
+//        System.out.println(yMaxMercator);
+        
+        Extent extent = new Extent();
+        extent.setMaximum(new LongLat(xMaxMercator, yMaxMercator, "EPSG:3857"));
+        extent.setMinimum(new LongLat(xMinMercator, yMinMercator, "EPSG:3857"));
+        
+        return extent;
+    }
     
 }
