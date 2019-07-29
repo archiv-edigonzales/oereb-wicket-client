@@ -12,4 +12,4 @@ RUN chown -R 1001:0 /home/oerebclient && \
 
 USER 1001
 
-ENTRYPOINT ["java","-cp","/home/oerebclient/app:/home/oerebclient/app/lib/*","ch.so.agi.oereb.wicketclient.OerebWicketClientApplication"]
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-cp","/home/oerebclient/app:/home/oerebclient/app/lib/*","ch.so.agi.oereb.wicketclient.OerebWicketClientApplication"]
